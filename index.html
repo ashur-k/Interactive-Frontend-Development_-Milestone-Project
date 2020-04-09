@@ -8,10 +8,13 @@
     <title>Coronavirus Data</title>
 </head>
 <body>
-    <button onclick="writeToDocument('United Kingdom')">United Kingdom</button>
+    <input id="country_name" type="text" placeholder="country_name">
+    <button onclick="err_msg()">Submit</button>
+    <h1 id="err_msg">Please enter valid country name</h1>
     <div id="data">
     
     </div>
+      <script src="assets/Javascript_files/countriesName.js"></script>
     <script src="assets/Javascript_files/script.js"></script>
 </body>
 </html>
