@@ -5,7 +5,16 @@ body {
     color: #fff;
 }
 
-#data table tr td{
+#data #data2 table tr td{
+    padding: 0;
+    margin: 0;
+    border: 1px inset #fff;
+    text-align:  center;
+    font-size: 32px;
+
+}
+
+#data2 table tr td{
     padding: 0;
     margin: 0;
     border: 1px inset #fff;

@@ -231,7 +231,8 @@ const countryList = [
 	"Tuvalu",
 	"Uganda",
 	"Ukraine",
-	"United Arab Emirates (the)",
+    "United Arab Emirates (the)",
+    "United Kingdom",
 	"United Kingdom of Great Britain and Northern Ireland (the)",
 	"United States Minor Outlying Islands (the)",
 	"United States of America (the)",
@@ -262,6 +263,7 @@ function err_msg() {
     }
     else {
          document.getElementById("err_msg").style.visibility="hidden";
+         document.getElementById("data").innerHTML ="";
         writeToDocument(country_name);
     }
 }
