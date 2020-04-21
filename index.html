@@ -1,21 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css_files/style.css">
-    <title>Coronavirus Data</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://kit.fontawesome.com/60ca92335a.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css_files/style.css">
+	<link rel="stylesheet" href="assets/css_files/style2.css">
+	<title>Coronavirus Data</title>
 </head>
+
 <body>
-    <input id="country_name" type="text" placeholder="country_name">
-    <button onclick="err_msg()">Submit</button>
-    <h1 id="err_msg">Please enter valid country name</h1>
-    <div id="data">
-    
-    </div>
-    <a href="second_page.html">second page</a>
-    <script src="assets/Javascript_files/countriesName.js"></script>
-    <script src="assets/Javascript_files/script.js"></script>
+	<header id="document_header">
+		<nav class="navbar my_navbar ">
+			<a class="navbar-brand text-center" href="#">Covid-19 Information Status</a>
+			<ul>
+				<li class="list-inline-item">
+					<a href="#" target="_blank">
+						<i class="fab fa-facebook"></i>
+						<span class="sr-only">Youtube.</span>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="#" target="_blank">
+						<i class="fab fa-twitter"></i>
+						<span class="sr-only">Youtube.</span>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="#" target="_blank">
+						<i class="fab fa-linkedin"></i>
+						<span class="sr-only">Youtube.</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<hr class="hr-divider">
+	<section id="hero-section" class="container-fluid">
+
+		<div class="jumbotron">
+			<nav class="nav my_navbar">
+				<a class="nav-link active" href="#">Home</a>
+				<a class="nav-link" href="#">Symptoms</a>
+				<a class="nav-link" href="#">Covid News</a>
+				<a class="nav-link" href="#">Covid- Instructions</a>
+
+			</nav>
+			<h1 class="display-4">Covid-19</h1>
+			<p class="lead">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered
+				coronavirus.</p>
+			<hr class="my-4">
+            <div id="user_input">
+            <input id="country_name" type="text" placeholder="country_name">
+	        <button onclick="err_msg()">Submit</button><br>
+            <h1 id="err_msg">Please enter valid country name</h1>
+            <label for="country_name">Numbers of deaths in UK:</label><hr class="general_hr">
+            <label for="country_name">Number of Active Cases in UK:</label><hr class="general_hr">
+            <label for="country_name">Critical Cases in UK:</label><hr class="general_hr">
+            </div>
+			</div>
+
+	</section>
+
+
+	<div id="data">
+
+	</div>
+	<a href="UK_stats.html">United Kingdom Stats</a><br>
+
+	<a href="second_page.html">second page</a>
+	<script src="assets/Javascript_files/script.js"></script>
+	<script src="assets/Javascript_files/countriesName.js"></script>
+
 </body>
+
 </html>

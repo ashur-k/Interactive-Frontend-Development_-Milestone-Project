@@ -9,13 +9,8 @@ function getData(type, cb) {
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
             cb(JSON.parse(this.responseText));
-            //data = JSON.parse(this.responseText);
-            //console.log(data.response);
-           // console.log(data.response[0].country);
-         //  console.log(data.response[0].cases);
-           // console.log(data.response[0].deaths);
-           // console.log(data.response[0].tests);
-           
+                
+            
         }
     });
 
@@ -42,12 +37,37 @@ function writeToDocument (type){
 
     getData(type, function(data){
         var tableRows = [];
-         console.log (data.response[0].cases);
-       
+          
          data = data.response;
-       // console.log (data);
+               // console.log(typeof(data));
       
+            let datawww = Object.entries(data);
+            //console.log(datawww);
+
         var tableHeaders = getTableHeaders(data[0]);
+        
+       data.forEach(function(element, index, array){
+           
+    
+        
+        
+        
+        let fullData = [];
+            fullData.push(array);
+     // console.log(array);
+          let first = array[0];
+    //console.log (first);
+          var arr = Object.keys(first);
+         
+        var arrobj = arr.map(function(key){
+               return {[key]: first[key]};
+        });
+       // console.log(arrobj);
+        document.getElementById("data2").innerHTML=arrobj;
+         
+        })
+        
+
 
         data.forEach(function(item){
             var dataRow = [];
@@ -69,29 +89,25 @@ function getTableHeaders2(obj){
     return `<tr>${tableHeaders2}</tr>`
 }
 
-function writeToDocument2(type)
-{   var tableRows2 = [];
+function writeToDocument2(type){  
+  
+    var tableRows2 = [];
     var el = document.getElementById("data2");
     el.innerHTML = "";
     getData(type, function(data)
     {
-        //console.dir(data);
+    
         data = data.response;
         var tableheaders2 = getTableHeaders2(data[0]);
-       // console.log (data);
-        
+             
         data.forEach(function(item){
             var dataRow2 =[];
             Object.keys(item.cases).forEach(function (key){
-                console.log(key);
+               
                 dataRow2.push(`<td>${item.cases[key]}</td>`)
             });
             tableRows2.push(`<tr>${dataRow2}</tr>`)
-           // Object.keys(item.cases).forEach(function(key){
-               // console.log(key);
-           // })
-        //console.dir(item.cases);
-       // document.getElementById("data2").innerHTML += `<p>${item.cases.new}</p>`;
+         
         });
 
         el.innerHTML = `<table>${tableheaders2}${tableRows2}</table>`

@@ -1,8 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: darkred;
-    color: #fff;
+    color: #000;
 }
 
 #data #data2 table tr td{
@@ -24,7 +23,7 @@ body {
 }
 
 #err_msg {
-    visibility: hidden;
+    display: none;
     color: red;
     background: white;
 }
