@@ -1,5 +1,5 @@
 const baseURL_get_stattics = "https://covid-193.p.rapidapi.com/statistics";
-const baseURL_get_country_history = "https://covid-193.p.rapidapi.com/history?day=2020-04-05&country=";
+const baseURL_get_country_history = "https://covid-193.p.rapidapi.com/history?day=2020-04-22&country=";
 
 function getData(type, cb) {
     var data = null;
@@ -9,15 +9,12 @@ function getData(type, cb) {
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
             cb(JSON.parse(this.responseText));
-                
-            
-        }
-    });
+             }
+            });
 
     xhr.open("GET", `${baseURL_get_country_history}${type}`);
     xhr.setRequestHeader("x-rapidapi-host", "covid-193.p.rapidapi.com");
     xhr.setRequestHeader("x-rapidapi-key", "e31173d748msh068eb1b2648d235p15ca87jsnc9dda1b88073");
-
     xhr.send(data);
 
 }
@@ -98,12 +95,17 @@ function writeToDocument2(type){
     {
     
         data = data.response;
+
+       // console.log (data[0]);
         var tableheaders2 = getTableHeaders2(data[0]);
              
         data.forEach(function(item){
             var dataRow2 =[];
             Object.keys(item.cases).forEach(function (key){
-               
+                //console.log(item);
+                console.log (typeof(item));
+                console.log(Array.isArray(item));
+                
                 dataRow2.push(`<td>${item.cases[key]}</td>`)
             });
             tableRows2.push(`<tr>${dataRow2}</tr>`)

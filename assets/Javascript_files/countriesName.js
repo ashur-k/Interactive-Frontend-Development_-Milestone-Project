@@ -260,7 +260,7 @@ function err_msg() {
     
 
     if (n == false) {
-    document.getElementById("err_msg").style.display="inline";
+    document.getElementById("err_msg").style.display="inline-block";
 
     }
     else {

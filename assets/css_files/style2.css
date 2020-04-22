@@ -27,11 +27,11 @@
         border-radius: 0rem;
             overflow: hidden;
     }
-#user_input label, input{
-    padding: 0;
-    margin: 0;
-}
+
 .general_hr{
     padding: 0px;
     margin: 0px;
+}
+#user_input h6{
+    font-size: 18px;
 }

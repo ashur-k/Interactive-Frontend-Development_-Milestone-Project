@@ -55,21 +55,38 @@
 				coronavirus.</p>
 			<hr class="my-4">
 
-            <div id="user_input">
-            <input id="country_name" type="text" placeholder="country_name">
-	        <button onclick="err_msg()">Submit</button><br>
-            <h1 id="err_msg">Please enter valid country name</h1>
+			<div id="user_input" class="container-fluid">
 
+				<div class="row">
+					<h6>Numbers of deaths in UK:-</h6>
+					<h6 id="deaths"></h6>
+				</div>
+				<div class="row">
+					<h6>Number of Active Cases in UK:-</h6>
+					<h6 id="active_cases"></h6>
+				</div>
+				<div class="row">
+					<h6>Critical Cases in UK:-</h6>
+					<h6 id="critical_cases"></h6>
+				</div>
+				<div class="row">
+					<input id="country_name" type="text" placeholder="country_name">
+					<button onclick="err_msg()">Submit</button>
+					<h6 id="err_msg">Please enter valid country name</h6>
+				</div>
 
-            <h6>Numbers of deaths in UK:</h6><hr class="general_hr"><p id="deaths"></p>
-            <label for="active_cases">Number of Active Cases in UK:</label><hr class="general_hr">
-            <label for="critical_cases">Critical Cases in UK:</label><hr class="general_hr">
-            </div>
+			</div>
 
 		</div>
 
 	</section>
+	<div class="container-fluid">
+		<div class="row">
+			<h6>Date: </h6>
+			<h6 id="today_date"></h6>
 
+		</div>
+	</div>
 
 	<div id="data">
 
@@ -77,9 +94,9 @@
 	<a href="UK_stats.html">United Kingdom Stats</a><br>
 
 	<a href="second_page.html">second page</a>
-    <script src="assets/Javascript_files/countriesName.js"></script>
+	<script src="assets/Javascript_files/countriesName.js"></script>
 	<script src="assets/Javascript_files/script.js"></script>
-	
+	<script src="assets/Javascript_files/API_getData.js"></script>
 
 </body>
 

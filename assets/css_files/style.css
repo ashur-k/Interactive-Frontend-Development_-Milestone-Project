@@ -24,6 +24,6 @@ body {
 
 #err_msg {
     display: none;
-    color: red;
-    background: white;
+    color: rgb(226, 154, 154);
+ 
 }
