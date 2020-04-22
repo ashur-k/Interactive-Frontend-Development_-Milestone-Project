@@ -1,3 +1,4 @@
+'use strict'
 const baseURL = "https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats?";
 
 function getData(type, cb){
@@ -48,9 +49,13 @@ function writeToDocument(type) {
         data.forEach(function(item){
             var dataRow = [];
             Object.keys(item).forEach(function(key){
-                var rowData = item[key].toString();
-                var truncatedData = rowData.substring(0, 50);
-                dataRow.push(`<td>${truncatedData}</td>`);
+                
+                var rowData = item[key];
+                //console.log(rowData);
+              dataRow.push(`<td>${rowData}</td>`);
+              //  var rowData = item[key].toString();
+               // var truncatedData = rowData.substring(0, 50);
+               // dataRow.push(`<td>${truncatedData}</td>`);
             });
             tableRows.push(`<tr>${dataRow}</tr>`);
             //el.innerHTML += `<p> Confirmed Deaths:${item.confirmed}</p>`;

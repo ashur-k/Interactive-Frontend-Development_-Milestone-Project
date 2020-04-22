@@ -1,3 +1,4 @@
+'use strict'
 const countryList = [
 	"Afghanistan",
 	"Albania",
@@ -235,7 +236,8 @@ const countryList = [
     "United Kingdom",
 	"United Kingdom of Great Britain and Northern Ireland (the)",
 	"United States Minor Outlying Islands (the)",
-	"United States of America (the)",
+    "United States of America (the)",
+    "USA",
 	"Uruguay",
 	"Uzbekistan",
 	"Vanuatu",
@@ -258,11 +260,11 @@ function err_msg() {
     
 
     if (n == false) {
-    document.getElementById("err_msg").style.visibility="visible";
+    document.getElementById("err_msg").style.display="inline";
 
     }
     else {
-         document.getElementById("err_msg").style.visibility="hidden";
+         document.getElementById("err_msg").style.display="none";
          document.getElementById("data").innerHTML ="";
         writeToDocument(country_name);
     }
