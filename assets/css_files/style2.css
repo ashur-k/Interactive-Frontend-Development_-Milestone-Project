@@ -8,6 +8,14 @@
 .my_navbar a {
     color:#fff;
     }
+
+    .navbar{
+        padding-left:0px;
+       
+    }
+    strong{
+        font-size: 45px;
+    }
 .hr-divider{
 
     background-color: red !important;
@@ -21,11 +29,12 @@
     overflow: hidden;
     }
     .jumbotron{
-        padding: 0px;
+        padding: 5px;
         margin-bottom: 1rem;
         background-color: #2e82d5;
         border-radius: 0rem;
             overflow: hidden;
+            border: 2px solid #333;
     }
 
 .general_hr{
@@ -34,4 +43,12 @@
 }
 #user_input h6{
     font-size: 18px;
+}
+i{
+     font-size: 38px;
+    margin-right: 26px;
+}
+.date-heading{
+    margin-right: 32px;
+   
 }
