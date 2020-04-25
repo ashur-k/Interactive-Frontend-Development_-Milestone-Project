@@ -11,16 +11,22 @@
     padding: 0px;
        
 }
-.my_navbar{
-   
-  }
+
 .my_navbar a {
-    color:#fff !important;
-      border: 2px solid #333;
+    color:#000 !important;
       padding: 2px;
       margin: 2px;
+      text-align: center;
+      font-style: bolder!important;
+
  
     }
+  .my_navbar  a:hover {
+  background-color: yellow;
+}
+.active {
+    background-color: yellow;
+}
 
     .navbar{
         padding-left:0px;
