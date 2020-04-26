@@ -1,4 +1,4 @@
-/*Header Area*/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,100 +6,81 @@
     box-sizing: border-box;
 
 }
+                                    /*Header Area*/
+/*.navbar-label is a class given to strong html tag to give custom settings to page logo {COVID-19}*/
+.navbar-label{
+        font-size: 45px;
+    }                    
+/*#document_header to make sure headers not scroll on different screen sizes*/
+/*This ID is name of header div*/
 #document_header{
     overflow: hidden;
     padding: 0px;
        
 }
-
+/*.my_navbar a: gives custom styling to bootstrap navbar */
 .my_navbar a {
     color:#000 !important;
-      padding: 2px;
-      margin: 2px;
-      text-align: center;
-      font-style: bolder!important;
-
- 
+    padding: 2px;
+    margin: 2px;
+    text-align: center;
+    font-size: 18px;
+    font-style: bolder!important;
     }
-  .my_navbar  a:hover {
-  background-color: yellow;
+/*.my_navbar  a:hover: gives hovering eddfect to Navbar navigation links */
+.my_navbar  a:hover {
+    background-color: lavenderblush;
 }
 .active {
-    background-color: yellow;
+    background-color: lavenderblush;
 }
-
-    .navbar{
-        padding-left:0px;
-        font-size: 18px;
-      
-       
-    }
-    strong{
-        font-size: 45px;
-    }
-.hr-divider{
-
-    background-color: red !important;
-    height: 5px;
-    margin: 0;
-    padding: 0;
-    }
-    #hero-section{
-    padding-right: 0px;
-    padding-left: 0px;
+/*navbar is a part of Jumbotron I have designed it in this way*/
+/*.jumbotron is to give custom settings to web page*/
+.jumbotron{
+    padding: 5px;
+    margin-bottom: 2rem;
+    background-color: #2e82d5;
+    border-radius: 0rem;
     overflow: hidden;
     }
-    .jumbotron{
-        padding: 5px;
-        margin-bottom: 1rem;
-        background-color: #2e82d5;
-        border-radius: 0rem;
-            overflow: hidden;
-            border: 2px solid #333;
-    }
-
-.general_hr{
-    padding: 0px;
-    margin: 0px;
-}
-#user_input h6{
-    font-size: 18px;
-}
+/*these settings are given to social link to control their sizing colour and padding etc..*/
 i{
-     font-size: 38px;
+    font-size: 38px ;
     margin-right: 26px;
 }
+/*Covid casualties up to day makes date an 
+important aspect thats why this class is written to give extra importatnce to date shown */
 .date-heading{
-    margin-right: 32px;
-   
-}
+    font-size: 26px;
+    font-style: bolder;
+   }
+
+                                /*Footer Area*/
+/*Footer has three text elments in it .p-font is giving those paragraph customs features*/
 .p-font{
     font-size: 16px;
 }
-.footer {
+/*.Footer-cols is a class given to whole footer elements*/
+.footer-cols{
     background-color: #2e82d5 !important;
-   
-     padding: 15px;
-}
-p{
-    font-size: 18px;
-    padding: 5px;
+    padding: 15px;
 }
 
-.footer-margins{
-    margin: 5px !important;
-}
+/*.auto-margins class is given to copyright bottom row to keep text in center*/
 .auto-margins{
+    padding-top: 2px;
     margin: auto !important;
 }
+/*.bg-light-grey class is given to give custom background and font color to copyright footer  */
 .bg-light-grey{
     background-color: 	#333;
-     color: #fff;
- 
-}
+    color: #fff;
+ }
 .footer-contact-me-list {
   list-style-type: none;
 }
+
+                                            /*Media Queries*/
 
 @media only screen and (max-width: 600px) {
  .hide-on-mobile {display: none !important;}
