@@ -54,48 +54,42 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#">Contact-me</a>
 							</li>
-
-
-
 						</ul>
 					</div>
 				</nav>
 			</div>
 			<div id="title_area_jumbotron" class="container-fluid">
 				<div class="row jumbotron_title_para">
-					<p>Coronavirus disease (COVID-19) is an infectious disease
+					<p class="lead bolder">Coronavirus disease (COVID-19) is an infectious disease
 						caused by a newly discovered coronavirus.Coronavirus disease (COVID-19) is an
 						infectious diseasecaused by a newly discovered coronavirus.</p>
 				</div>
 			</div>
-
 			<div id="js-data">
 				<div class="row">
 					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 font-setting-for-js-data">
-						UK Total Deaths: <span id="deaths"></span>
+						<span class="text-white"> UK Total Deaths:</span>
+						<strong><span class="text-white" id="deaths"></span></strong>
 						<hr class="custom-hr">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 font-setting-for-js-data">
-						UK Active Cases:
-						<span id="active_cases">some data</span>
+						<span class="text-white">UK Active Cases:</span>
+						<strong><span class="text-white" id="active_cases">some data</span></strong>
 						<hr class="custom-hr">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 font-setting-for-js-data">
-						UK Critical Cases: <span id="critical_cases">some data</span>
+						<span class="text-white"> UK Critical Cases: </span>
+						<strong><span class="text-white" id="critical_cases">some data</span></strong>
 						<hr class="custom-hr">
 					</div>
-
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
 						<span class="date-heading" id="today_date">2020-04-25</span>
-
 					</div>
-
 				</div>
-
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 button-col-css">
 						<input id="country_name" type="text" placeholder="country_name">
@@ -103,39 +97,121 @@
 						<h6 id="err_msg">Please enter valid country name</h6>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 social-link-col-css">
-						<i class="fab fa-twitter social-links"></i>
-						<i class="fab fa-facebook social-links"></i>
-						<i class="fab fa-linkedin social-links"></i>
+						<i class="fab fa-twitter social-links "></i>
+						<i class="fab fa-facebook social-links "></i>
+						<i class="fab fa-linkedin social-links "></i>
 					</div>
 				</div>
 
-
-
-
-
-
-
-
 			</div>
-
-
-
-
-
-
-
-
-
-
 		</div>
 	</header>
 
+<!--
+    NHS SYMPTOMS AND INTRUCTIONS
+-->
+<div id="NHS-Advise" class="container-fluid">
+	<div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h1>UK, National Health Service:</h1><hr class="heading-hr">     
+        </div>        
+    </div>    
+    <div class="row">    
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <p class="lead text-white"><mark class="text-danger"><strong>Common
+                 symptoms: You may have coronovirus if you have either of the following 
+                 symptoms, however mild:</strong></mark>
+			</p>
+		</div>
+    </div>
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="card">
+            <div class="card-body text-center high-temperature">
+                <h5 class="card-title">High Temperature</h5>
+                <p class="card-text">This means you feel hot to touch on your chest or back
+			        (you do not need to measure your temperature).
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="card">
+            <div class="card-body high-temperature">
+                <h5 class="card-title text-center card-title">A new continuous cough</h5>
+                <p class="card-text">This means coughing a lot for more than an hour, or 3 or more coughing
+			        episodes in 24 hours (if you usually have a cough, it may be worse than usual).
+                 </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+	    <p class="lead">Anyone who has these symptoms must stay at home until the symptoms have ended, and in
+					all cases for at least seven days. Everyone else in the household must stay at home for at least
+					14 days after the first person symptoms appear, even if they themselves do not have symptoms. if
+					Anyone else develops symptoms during that time, that individual must stay home for an additional
+					seven days
+					from when they developed symptoms.
+					Once seven days passed and provided symptoms have ended, they no longer need to isolate.
+		</p>
+    </div>
+</div>
+</div>
+
+<!--
+    WHO SYMPTOMS AND INTRUCTIONS
+-->
+<div id="WHO-Advise" class="container-fluid ">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h1>World Health Organisation</h1><hr class="heading-hr">
+		</div>
+	</div>
+    <div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<p class="lead">The COVID-19 virus affects different people in
+					different ways. COVID-19 is a respiratory disease and most infected
+					people will develop mild to moderate symptoms and recover without
+					requiring special treatment. People who have underlying medical
+					conditions and those over 60 years old have a higher risk of developing
+					severe disease and death.
+			</p>
+		</div>
+    </div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+			<h5>Common Symptoms Include</h5>
+            <ul class="footer-contact-me-list">
+                <li>Fever</li>
+			    <li>Tiredness</li>
+			    <li>Dry cough</li>
+			</ul>
+		</div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+			<h5>Other Symptoms Include</h5>
+            <ul class="footer-contact-me-list">
+                <li>Shortness of breath</li>
+			    <li>Aches and pains</li>
+			    <li>Sore throath</li>
+                <li>Very few people will report diarrhoea, nausea or a runny nose.</li>
+			</ul>
+		</div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <p class="lead">
+        People with mild symptoms who are otherwise healthy should self-isolate and contact
+        their medical provider or a COVID-19 information line for advice on testing and referral.
+        </p>
+        </div>
+    </div>
+</div>
+
+
 
 	<div id="data" class="container-fluid">
-
 	</div>
 	<a href="UK_stats.html">United Kingdom Stats</a><br>
-
 	<a href="second_page.html">second page</a>
 	<footer id="footer" class="container-fluid bg-grey">
 		<div class="row ">

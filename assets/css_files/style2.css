@@ -10,6 +10,7 @@
 /*.navbar-label is a class given to strong html tag to give custom settings to page logo {COVID-19}*/
 .navbar-label{
         font-size: 45px;
+        
     }                    
 /*#document_header to make sure headers not scroll on different screen sizes*/
 /*This ID is name of header div*/
@@ -18,6 +19,7 @@
     padding: 0px;
        
 }
+
 /*.my_navbar a: gives custom styling to bootstrap navbar */
 .my_navbar a {
     color:#000 !important;
@@ -53,7 +55,7 @@
  
 }
 i:hover{
-    background-color: white;
+    background-color: #fff;
 }
 /*button-col-css class is for custom css settings for bootstrap column for better apperance*/
 .button-col-css{
@@ -147,4 +149,30 @@ and (max-device-width : 1024px)  {
 
 @media only screen and (min-width: 768px) and (max-width:991px){
   
+}
+
+/*symptoms page*/
+
+/*I want stand out border class for symptoms*/
+
+.high-temperature{
+    border: 2px solid green;
+   
+
+    padding: 5px;
+    margin: auto;
+}
+.symptoms-warning{
+  
+    margin-left: 10px;
+}
+.heading-hr{
+    height: 5px;
+    width:100%;
+    background-color: #2e82d5;
+}
+.card-title{
+    background-color:#2e82d5; 
+    color:#fff;
+     padding:5px;
 }
