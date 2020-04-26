@@ -62,7 +62,7 @@ i:hover{
 }
 /*social-link-col-css class is for custom css settings for bootstrap column*/
 .social-link-col-css{
-       margin-bottom:12px;
+       margin-bottom:2px;
        padding-right:10px; 
  }
 /*Covid casualties up to day makes date an 
@@ -100,11 +100,15 @@ important aspect thats why this class is written to give extra importatnce to da
 }
 /*.bg-light-grey class is given to give custom background and font color to copyright footer  */
 .bg-light-grey{
-    background-color: 	#333;
+    
     color: #fff;
+ }
+ .bg-grey{
+      background-color: #333;
  }
 .footer-contact-me-list {
   list-style-type: none;
+ 
 }
 
                                             /*Media Queries*/
