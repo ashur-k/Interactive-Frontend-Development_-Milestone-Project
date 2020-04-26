@@ -43,16 +43,43 @@
     border-radius: 0rem;
     overflow: hidden;
     }
-/*these settings are given to social link to control their sizing colour and padding etc..*/
-i{
+/*these settings are given to social link to control their sizing colour and padding, hovering etc..*/
+ 
+ i{
     font-size: 38px ;
-    margin-right: 26px;
+    margin-right: 22px;
+    padding: 4px;
+    border: 2px solid #000;
+ 
 }
+i:hover{
+    background-color: white;
+}
+/*button-col-css class is for custom css settings for bootstrap column for better apperance*/
+.button-col-css{
+     margin-top:10px;
+     margin-bottom: 10px;
+}
+/*social-link-col-css class is for custom css settings for bootstrap column*/
+.social-link-col-css{
+       margin-bottom:12px;
+       padding-right:10px; 
+ }
 /*Covid casualties up to day makes date an 
 important aspect thats why this class is written to give extra importatnce to date shown */
 .date-heading{
     font-size: 26px;
     font-style: bolder;
+    }
+ /*To give custom settings to horizontal line to make it stand out*/
+   .custom-hr{
+       width: 175px;
+       background-color: #000;
+   }
+   .font-setting-for-js-data{
+       font-size: 18px;
+       font-style: bolder;
+       color:#000;
    }
 
                                 /*Footer Area*/

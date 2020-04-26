@@ -69,43 +69,65 @@
 				</div>
 			</div>
 
-			<div class="d-flex flex-row bd-highlight mb-1">
-				<div class="bd-highlight"><span class="date-heading" id="today_date">2020-04-25</span></div>
-			</div>
-			<div class="d-flex flex-row bd-highlight mb-1">
-				<input id="country_name" type="text" placeholder="country_name">
-				<button onclick="err_msg()">Submit</button>
-				<h6 id="err_msg">Please enter valid country name</h6>
-			</div>
-
-			<div class="d-flex flex-row bd-highlight mb-1">
-				<div class="bd-highlight">UK Total Deaths: <span id="deaths"></span></div>
-			</div>
-
-			<div class="d-flex bd-highlight mb-1">
-				<div class="flex-grow-1 bd-highlight">UK Active Cases:
-					<span id="active_cases">some data</span></div>
-
-
-			</div>
-
-			<div class="d-flex bd-highlight mb-1">
-				<div class="flex-grow-1 bd-highlight">UK Critical Cases: <span id="critical_cases">some data</span>
+			<div id="js-data">
+				<div class="row">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 font-setting-for-js-data">
+						UK Total Deaths: <span id="deaths"></span>
+						<hr class="custom-hr">
+					</div>
 				</div>
-				<div class="d-flex bd-highlight hide-on-mobile">
-					<div class="bd-highlight"><i class="fab fa-twitter"></i></div>
-					<div class=" bd-highlight"><i class="fab fa-facebook"></i></div>
-					<div class=" bd-highlight"><i class="fab fa-linkedin"></i></div>
+				<div class="row">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 font-setting-for-js-data">
+						UK Active Cases:
+						<span id="active_cases">some data</span>
+						<hr class="custom-hr">
+					</div>
 				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 font-setting-for-js-data">
+						UK Critical Cases: <span id="critical_cases">some data</span>
+						<hr class="custom-hr">
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+						<span class="date-heading" id="today_date">2020-04-25</span>
+
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 button-col-css">
+						<input id="country_name" type="text" placeholder="country_name">
+						<button onclick="err_msg()">Submit</button>
+						<h6 id="err_msg">Please enter valid country name</h6>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 social-link-col-css">
+						<i class="fab fa-twitter social-links"></i>
+						<i class="fab fa-facebook social-links"></i>
+						<i class="fab fa-linkedin social-links"></i>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
 			</div>
-			<div class="d-flex bd-highlight hide-on-large">
-				<div class="bd-highlight"><i class="fab fa-twitter"></i></div>
-				<div class=" bd-highlight"><i class="fab fa-facebook"></i></div>
-				<div class=" bd-highlight"><i class="fab fa-linkedin"></i></div>
-			</div>
+
+
+
+
+
+
+
+
+
+
 		</div>
-
-
 	</header>
 
 
@@ -117,9 +139,9 @@
 	<a href="second_page.html">second page</a>
 	<footer id="footer" class="container-fluid bg-light-grey">
 		<div class="row ">
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 footer-cols">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4  footer-cols">
 				<div class="row">
-					<div class="col-12 footer-margins">
+					<div class="col-12">
 						<h6>About this project</h6>
 					</div>
 					<div class="col-12">
@@ -133,21 +155,27 @@
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 footer-cols">
 				<div class="row">
-					<div class="col-12 footer-margins">
+					<div class="col-12">
 						<h6>About-me</h6>
 					</div>
 					<div class="col-12 ">
-						<div class="d-flex align-items-start "><p class="p-font">I am a computer Programmer, at the moment I am doing Full-stack webdevelopment
-							course.
-							This web is my project for fornt end web devlopment module. I am a graduate from Pakistan
-							International
-							Institute Management and Science</p></div>                        
+						<div class="d-flex align-items-start ">
+							<p class="p-font">I am a computer Programmer, at the moment I am doing Full-stack
+								webdevelopment
+								course.
+								This web is my project for fornt end web devlopment module. I am a graduate from
+								Pakistan
+								International
+								Institute Management and Science</p>
+						</div>
+
+
 					</div>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 footer-cols">
 				<div class="row">
-					<div class="col-12 footer-margins">
+					<div class="col-12">
 						<h6>Contact-me</h6>
 					</div>
 					<div class="row">
@@ -157,7 +185,7 @@
 									<li class="">Ashur Kanwal</li>
 									<li class="">ashurkanwal@yahoo.com</li>
 									<li class="">Phone number</li>
-								
+								</ul>
 							</div>
 						</div>
 						<div class="col-12">
