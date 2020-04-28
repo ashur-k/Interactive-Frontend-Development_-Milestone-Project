@@ -16,7 +16,7 @@ xhr.onreadystatechange = function(){
     if (this.readyState == 4 && this.status == 200){
        cb(JSON.parse(this.responseText));
 
-        
+        console.log (cb);
     }
 }
 
@@ -42,8 +42,9 @@ function writeToDocument(type) {
    el.innerHTML = "";
     getData(type, function(data) {
 
-        //console.dir(data);
+       console.dir(data);
         data = data.data.covid19Stats;
+        console.log (data);
         var tableHeaders = getTableHeaders(data[0]);
 
         data.forEach(function(item){

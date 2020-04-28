@@ -36,7 +36,8 @@ function writeToDocument (type){
         var tableRows = [];
           
          data = data.response;
-               // console.log(typeof(data));
+
+               console.log(data);
       
             let datawww = Object.entries(data);
             //console.log(datawww);
@@ -115,4 +116,3 @@ function writeToDocument2(type){
         el.innerHTML = `<table>${tableheaders2}${tableRows2}</table>`
     })
 }
-

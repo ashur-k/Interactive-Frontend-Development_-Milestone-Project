@@ -19,6 +19,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
 	</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
 	<title>Home-Page</title>
 </head>
 
@@ -26,7 +27,7 @@
 	<!--Header Section-->
 	<header id="document_header" class="container-fluid">
 
-		<div class="jumbotron jumbotron-fluid">
+		<div class="jumbotron bg-primary jumbotron-fluid">
 			<div id="nav-div">
 				<nav class="navbar my_navbar navbar-expand-lg navbar-light">
 					<span class="navbar-brand">
@@ -65,30 +66,34 @@
 			</div>
 			<div id="title_area_jumbotron" class="container-fluid">
 				<div class="row jumbotron_title_para">
-					<p>Coronavirus disease (COVID-19) is an infectious disease
-						caused by a newly discovered coronavirus.Coronavirus disease (COVID-19) is an
-						infectious diseasecaused by a newly discovered coronavirus.</p>
+					<p class="lead">Coronavirus disease 2019 (COVID-19) is an infectious disease caused by 
+                    severe acute respiratory syndrome coronavirus 2 (SARS-COV-2). The disease 
+                    was first identified in December 2019 in Wuhan, the capital of China’s 
+                    Hubei province, and has since spread globally, resulting in the ongoing 
+                    2019-20 coronavirus pandemic. As of <span id="updateDate">27 April 2020</span>, more than <span id="confirmed">3.06 million</span> 
+                    cases have been reported across 185 countries and territories, resulting in
+                     more than<span id="world_deaths"> </span>More than <span id="recovered_numbers">906,000</span> people have recovered.</p>
 				</div>
 			</div>
 			<!--Jumbotron DAte & Data Row this area is retreiving values from js functions-->
 
 			<div id="js-data">
 				<div class="row">
-					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 font-setting-for-js-data">
-						UK Total Deaths: <span id="deaths"></span>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<h5 id="deaths"></h5>
 						<hr class="custom-hr">
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 font-setting-for-js-data">
-						UK Active Cases:
-						<span id="active_cases">some data</span>
+                	<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+						<h5 id="active_cases"></h5>
 						<hr class="custom-hr">
 					</div>
 				</div>
+				
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 font-setting-for-js-data">
-						UK Critical Cases: <span id="critical_cases">some data</span>
+					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
+					 <h5 id="critical_cases"></h5>
 						<hr class="custom-hr">
 					</div>
 
@@ -122,8 +127,20 @@
 			</div>
 		</div>
 	</header>
+
+    <!--Page Title Jumbotron-->
+<div class="container-xl">
+<div class="jumbotron bg-dark jumbotron">
+		<div class="container">
+			<h1 class="display-4 text-uppercase text-white">Covid-19 general information</h1>
+			<p class="lead"></p>
+		</div>
+	</div>
+</div>
+
+
 	<!--1st Section-->
-	<section id="first-section" class="container-fluid">
+	<section id="first-section" class="container-xl">
 
 		<div class="container-fluid">
 			<div class="row">
@@ -168,7 +185,7 @@
 
 	</section>
 	<!--2nd Section-->
-	<section id="second-section" class="container-fluid">
+	<section id="second-section" class="container-xl">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
@@ -211,7 +228,7 @@
 	<div id="data" class="container-fluid">
 
 	</div>
-	<a href="UK_stats.html">United Kingdom Stats</a><br>
+
 
 	<a href="second_page.html">second page</a>
 	<!--Footer Section-->
@@ -282,6 +299,7 @@
 	<script src="assets/Javascript_files/countriesName.js"></script>
 	<script src="assets/Javascript_files/script.js"></script>
 	<script src="assets/Javascript_files/API_getData.js"></script>
+    	<script src="assets/Javascript_files/worldwide_total_corona_cases.js"></script>
 
 </body>
 

@@ -234,6 +234,7 @@ const countryList = [
 	"Ukraine",
     "United Arab Emirates (the)",
     "United Kingdom",
+    "UK",
 	"United Kingdom of Great Britain and Northern Ireland (the)",
 	"United States Minor Outlying Islands (the)",
     "United States of America (the)",
@@ -266,6 +267,9 @@ function err_msg() {
     else {
          document.getElementById("err_msg").style.display="none";
          document.getElementById("data").innerHTML ="";
-        writeToDocument(country_name);
+  writeToDocument(country_name);
+   
+       
+       printToDocument(country_name);
     }
 }
