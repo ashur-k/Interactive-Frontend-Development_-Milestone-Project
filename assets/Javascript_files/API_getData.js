@@ -20,9 +20,15 @@ let country = countryName;
     xhr.send(data);
 }
 
+function printflag(flagName){
+
+    console.log (flagName);
+    document.getElementById("img").src = `assets/Images/flag-svg/${flagName}.svg`;
+}
+
 
 function printToDocument(countryName){
- 
+    printflag(countryName);
     getCoronoData(countryName, function(data){
       
     data = data.response;

@@ -192,3 +192,8 @@ and (max-device-width : 1024px)  {
     width: 1120px;
     
 }
+#img{
+    width: 6%;
+    padding-bottom: 6px;
+
+}
