@@ -8,8 +8,7 @@
 	<script src="https://kit.fontawesome.com/60ca92335a.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/css_files/style.css">
-	<link rel="stylesheet" href="assets/css_files/style2.css">
+
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 	</script>
@@ -19,7 +18,11 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
 	</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+		integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="assets/css_files/style.css">
+	<link rel="stylesheet" href="assets/css_files/style2.css">
+
 	<title>Home-Page</title>
 </head>
 
@@ -66,13 +69,15 @@
 			</div>
 			<div id="title_area_jumbotron" class="container-fluid">
 				<div class="row jumbotron_title_para">
-					<p class="lead">Coronavirus disease 2019 (COVID-19) is an infectious disease caused by 
-                    severe acute respiratory syndrome coronavirus 2 (SARS-COV-2). The disease 
-                    was first identified in December 2019 in Wuhan, the capital of China’s 
-                    Hubei province, and has since spread globally, resulting in the ongoing 
-                    2019-20 coronavirus pandemic. As of <span id="updateDate">27 April 2020</span>, more than <span id="confirmed">3.06 million</span> 
-                    cases have been reported across 185 countries and territories, resulting in
-                     more than<span id="world_deaths"> </span>More than <span id="recovered_numbers">906,000</span> people have recovered.</p>
+					<p class="lead">Coronavirus disease 2019 (COVID-19) is an infectious disease caused by
+						severe acute respiratory syndrome coronavirus 2 (SARS-COV-2). The disease
+						was first identified in December 2019 in Wuhan, the capital of China’s
+						Hubei province, and has since spread globally, resulting in the ongoing
+						2019-20 coronavirus pandemic. As of <u><span id="updateDate"></span></u>, more than
+						<u><span id="confirmed">3.06 million</span></u>
+						cases have been reported across 185 countries and territories, resulting in
+						<u> <span id="world_deaths"></span></u> deaths. More than
+						<u><span id="recovered_numbers">906,000</span></u> people have recovered.</p>
 				</div>
 			</div>
 			<!--Jumbotron DAte & Data Row this area is retreiving values from js functions-->
@@ -84,16 +89,16 @@
 						<hr class="custom-hr">
 					</div>
 				</div>
-                	<div class="row">
+				<div class="row">
 					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
 						<h5 id="active_cases"></h5>
 						<hr class="custom-hr">
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
-					 <h5 id="critical_cases"></h5>
+						<h5 id="critical_cases"></h5>
 						<hr class="custom-hr">
 					</div>
 
@@ -116,190 +121,267 @@
 						<i class="fab fa-linkedin social-links"></i>
 					</div>
 				</div>
-
-
-
-
-
-
-
-
 			</div>
 		</div>
 	</header>
 
-    <!--Page Title Jumbotron-->
-<div class="container-xl">
-<div class="jumbotron bg-dark jumbotron">
-		<div class="container">
+	<!--Page Title Jumbotron-->
+	<div class="container-xl">
+		<div class="jumbotron bg-dark jumbotron">
 			<h1 class="display-4 text-uppercase text-white">Covid-19 general information</h1>
-			<p class="lead"></p>
 		</div>
 	</div>
-</div>
+	<div class="container-xl auto-margins">
+
+		<div class="col-10 border border-warning auto-margins">
+			<h4 class="text-center">Covid-19 Detailed Analysis</h4>
+		</div>
+		<div class="col-10 border border-warning auto-margins">
+		<h3 class="text-center"> <span id="countryName" class="text-capitalize"></span></h3><hr class="bg-warning">
+    
+    <!--Prinitng Cases values from aPI-->
+    <div class="col-12 p-3">
+        <h6 class="text-capitalize">
+            <span id="cases-title"></span>
+        </h6>
+    </div>
+    <div class="row no-gutters">
+          <!--Printing new cases results-->
+    <hr class="vl">
+    <div class="col-2 p-3">
+        <span id="casesKey0" class="text-capitalize"></span><br>
+        <span id="casesValue0"> </span>
+    </div>
+              <!--Printing Active cases results-->
+    <hr class="vl">
+    <div class="col-2 p-3">
+        <span id="casesKey1" class="text-capitalize"></span><br>
+        <span id="casesValue1"> </span>
+    </div>
+            <!--Printing Crtical cases results-->
+    <hr class="vl">
+    <div class="col-2 p-3">
+        <span id="casesKey2" class="text-capitalize"></span><br>
+        <span id="casesValue2"> </span>
+    </div>
+          <!--Printing Recovered cases results-->
+    <hr class="vl">	
+    <div class="col-2 p-3">
+        <span id="casesKey3" class="text-capitalize"><br><br>
+        </span> <span id="casesValue3"></span>
+    </div>
+      <!--Printing total cases results-->
+    <hr class="vl">
+    <div class="col-2 p-3">
+        <span id="casesKey4" class="text-capitalize"></span><br>
+        <span id="casesValue4"> </span>
+    </div>
+    <!--Prinitng Deaths values from aPI-->
+    <div class="col-12 p-3">
+        <h6>
+            <span id="deathsTitle" class="text-capitalize"></span>
+        </h6>
+    </div>
+
+    <hr class="vl">
+    <div class="col-2 p-3">
+     <span id="deathsKey0" class="text-capitalize"></span><br>
+    <span id="deathsValue0"> </span>
+    </div>
+    		
+    <hr class="vl">
+    <div class="col-2 p-3">
+     <span id="deathsKey1" class="text-capitalize"></span><br>
+    <span id="deathsValue1"> </span>
+    </div>
+    <!--Prinitng Tests values from aPI-->
+    <div class="col-12 p-3">
+        <h6>
+            <span id="testsTitle" class="text-capitalize"></span>
+        </h6>
+    </div>
+
+    <hr class="vl">	
+    <div class="col-2 p-3"> 
+        <span id="testsKey0" class="text-capitalize"></span><br>
+        <span id="testsValue0"> </span>
+    </div>
+
+    </div>
+	</div>
+    
+    		
+    </div>
+	</div>
+                
+		
+		
+	</div>
+		
 
 
-	<!--1st Section-->
-	<section id="first-section" class="container-xl">
 
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-					<h1>Corono Information</h1>
+		<!--1st Section-->
+		<section id="first-section" class="container-xl">
+
+			<div class="container-fluid">
+				<div class="row">
+
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Repudiandae enim commodi eveniet? Distinctio vero quas aliquid quae officiis,
-						ipsam dolor voluptatum qui veniam hic eum blanditiis! Obcaecati vero eum sint
-						odit officia eveniet placeat impedit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Repudiandae enim commodi eveniet? Distinctio vero quas aliquid quae officiis,
-						ipsam dolor voluptatum qui veniam hic eum blanditiis! Obcaecati vero eum sint
-						odit officia eveniet placeat impedit</p>
+				<div class="row">
+					<div class="col-xs-8 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<h3>Overview</h3>
+						<p>Coronaviruses are a family of viruses common across the world in animals and humans; certain
+							types cause illnesses in people. For example, some coronaviruses cause the common cold;
+							others cause diseases which are much more severe, such as Middle East Respiratory Syndrome
+							(MERS) and Severe Acute Respiratory Syndrome (SARS), both of which often lead to pneumonia.
+
+							Covid-19 is the illness seen in people infected with a new strain of coronavirus not
+							previously seen in humans. On 31 December 2019, Chinese authorities notified the World
+							Health Organisation (WHO) of an outbreak of pneumonia in Wuhan City, which was later
+							classified as a new disease: Covid-19.
+
+							On 30 January 2020, WHO declared the outbreak of Covid-19 a 'Public Health Emergency of
+							International Concern' (PHEIC). WHO declared Covid-19 a pandemic on 11 March 2020.</p>
+					</div>
 				</div>
-			</div>
-			<div class="row ">
-				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-					<img src="assets/Images/Corono.jpg" class="img-fluid" style="height: 100%; width: 100%" alt="Responsive image">
+				<div class="row ">
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+						<img src="assets/Images/Corono.jpg" class="img-fluid" style="height: 100%; width: 100%" alt="Responsive image">
             </div>
-					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 auto-margins">
-						<p class="align-middle middle">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Adipisci atque neque iusto ducimus, aut aspernatur, aperiam molestiae
-							reprehenderit nesciunt blanditiis provident accusamus possimus! Accusantium
-							error amet molestias hic ducimus fugit?</p>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 auto-margins">
+							<p class="align-middle middle">Based on current evidence, the main symptoms of Covid-19 are
+								a cough, a fever and, in severe cases, shortness of breath.</p>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-12">
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, aut expedita incidunt
-							deleniti voluptate, a at eaque possimus nobis, odit suscipit. Placeat, pariatur sunt fuga
-							blanditiis sint unde vel, sapiente iure quae tempora maiores commodi perferendis? Ad
-							mollitia
-							dignissimos sunt cupiditate unde reiciendis iste alias, doloribus fugit ipsa illo corrupti.
-						</p>
-					</div>
-				</div>
-
-			</div>
-
-	</section>
-	<!--2nd Section-->
-	<section id="second-section" class="container-xl">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
 					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-							<h1>design here 2</h1>
-						</div>
-
 						<div class="col-12">
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. D
-								oloremque tempora recusandae officiis laboriosam eligendi illo non s
-								int deserunt deleniti eum.</p>
+							<p>As it is a new virus, the lack of immunity in the population (and the absence as yet of
+								an effective vaccine) means that Covid-19 has the potential to spread extensively. The
+								current data seem to show that we are all susceptible to catching this disease, and thus
+								it is also more likely than not that the UK will be significantly affected. Among those
+								who become infected, some will exhibit no symptoms. Early data suggest that of those who
+								develop the illness, the great majority will have a mild-to-moderate, but self-limiting
+								illness – similar to seasonal flu.
+
+								It is, however, also clear that a minority of people who get Covid-19 will develop
+								complications, most often pneumonia, severe enough to require hospital care. In a small
+								proportion of these, the illness may be severe enough to lead to death. So far the data
+								we have suggest that the risk of severe disease and death increases amongst elderly
+								people and in people with underlying health risk conditions (in the same way as for
+								seasonal flu).
+							</p>
+							<p>Illness is less common and usually less severe in younger adults. Children can be
+								infected and can have a severe illness, but based on current data overall illness seems
+								rarer in people under 20 years of age.
+
+								Given that the data are still emerging, the UK and Scottish Governments remain uncertain
+								of the impact of an outbreak on businesses and organisations like universities.
+
+								We do not yet have entirely complete data on this disease. But as we learn more about
+								the virus, its effects and its behaviour (for example, the timing and extent of the peak
+								of an outbreak, its precise impact on individuals), we will be able to revise estimates
+								of its potential spread, severity and impact. The UK Government will then review and
+								(where necessary) adapt this plan accordingly.
+
+								Work is in hand to contain the spread of the virus. This includes extensive guidance
+								provided to individuals returning from areas where there are cases being reported, and
+								encouraging self-isolation as the primary means to contain the spread of the disease.
+								Given that there is currently neither a vaccine against COVID-19 nor any specific,
+								proven, antiviral medication, most treatment will therefore be towards managing symptoms
+								and providing support to patients with complications.
+
+								Covid-19 most commonly results in a comparatively mild illness which lasts a few days.
+								In a minority of cases, illness persists for longer.
+
+								The majority of people with Covid-19 have recovered without the need for any specific
+								treatment, as is the case for the common cold or seasonal flu – and we expect that the
+								vast majority of cases will best be managed at home, again as with seasonal colds and
+								flu.</p>
 						</div>
 					</div>
 
-
 				</div>
 
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-							<h1>design here 2</h1>
-						</div>
+		</section>
+		<!--2nd Section-->
+		
 
-						<div class="col-12">
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. D
-								oloremque tempora recusandae officiis laboriosam eligendi illo non s
-								int deserunt deleniti eum.</p>
-						</div>
-					</div>
+		<div id="data" class="container-fluid">
 
-
-				</div>
-			</div>
 		</div>
 
 
-	</section>
-
-	<div id="data" class="container-fluid">
-
-	</div>
-
-
-	<a href="second_page.html">second page</a>
-	<!--Footer Section-->
-	<footer id="footer" class="container-fluid bg-grey">
-		<div class="row ">
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4  footer-cols">
-				<div class="row">
-					<div class="col-12">
-						<h6>About this project</h6>
-					</div>
-					<div class="col-12">
-						<p class="p-font">Coronavirus has dratistically affected lives of many and others who
-							are saved from this virus are locked inside their houses to protect them selves
-							In current situation I am encouraged to gather reliable data about this virus and
-							also give facts collecting from reliable API.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 footer-cols">
-				<div class="row">
-					<div class="col-12">
-						<h6>About-me</h6>
-					</div>
-					<div class="col-12 ">
-						<div class="d-flex align-items-start ">
-							<p class="p-font">I am a computer Programmer, at the moment I am doing Full-stack
-								webdevelopment
-								course.
-								This web is my project for fornt end web devlopment module. I am a graduate from
-								Pakistan
-								International
-								Institute Management and Science</p>
-						</div>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 footer-cols">
-				<div class="row">
-					<div class="col-12">
-						<h6>Contact-me</h6>
-					</div>
+		<a href="second_page.html">second page</a>
+		<!--Footer Section-->
+		<footer id="footer" class="container-fluid bg-grey">
+			<div class="row ">
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4  footer-cols">
 					<div class="row">
 						<div class="col-12">
+							<h6>About this project</h6>
+						</div>
+						<div class="col-12">
+							<p class="p-font">Coronavirus has dratistically affected lives of many and others who
+								are saved from this virus are locked inside their houses to protect them selves
+								In current situation I am encouraged to gather reliable data about this virus and
+								also give facts collecting from reliable API.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 footer-cols">
+					<div class="row">
+						<div class="col-12">
+							<h6>About-me</h6>
+						</div>
+						<div class="col-12 ">
+							<div class="d-flex align-items-start ">
+								<p class="p-font">I am a computer Programmer, at the moment I am doing Full-stack
+									webdevelopment
+									course.
+									This web is my project for fornt end web devlopment module. I am a graduate from
+									Pakistan
+									International
+									Institute Management and Science</p>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 footer-cols">
+					<div class="row">
+						<div class="col-12">
+							<h6>Contact-me</h6>
+						</div>
+						<div class="row">
 							<div class="col-12">
-								<ul class="footer-contact-me-list">
-									<li class="">Ashur Kanwal</li>
-									<li class="">ashurkanwal@yahoo.com</li>
-									<li class="">Phone number</li>
-								</ul>
+								<div class="col-12">
+									<ul class="footer-contact-me-list">
+										<li class="">Ashur Kanwal</li>
+										<li class="">ashurkanwal@yahoo.com</li>
+										<li class="">Phone number</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-12">
 							</div>
 						</div>
-						<div class="col-12">
-						</div>
+					</div>
+				</div>
+				<div class="row bg-light-grey auto-margins">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 auto-margins">
+						<p class="text-center ">&#169; Copyright 2020 </p>
 					</div>
 				</div>
 			</div>
-			<div class="row bg-light-grey auto-margins">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 auto-margins">
-					<p class="text-center ">&#169; Copyright 2020 </p>
-				</div>
-			</div>
-		</div>
-	</footer>
+		</footer>
 
-	<script src="assets/Javascript_files/countriesName.js"></script>
-	<script src="assets/Javascript_files/script.js"></script>
-	<script src="assets/Javascript_files/API_getData.js"></script>
-    	<script src="assets/Javascript_files/worldwide_total_corona_cases.js"></script>
+		<script src="assets/Javascript_files/countriesName.js"></script>
+		<script src="assets/Javascript_files/script.js"></script>
+		<script src="assets/Javascript_files/API_getData.js"></script>
+		<script src="assets/Javascript_files/worldwide_total_corona_cases.js"></script>
 
 </body>
 

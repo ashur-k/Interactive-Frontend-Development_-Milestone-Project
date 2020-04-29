@@ -1,5 +1,5 @@
-const baseURL_get_stattics = "https://covid-193.p.rapidapi.com/statistics";
-const baseURL_get_country_history = "https://covid-193.p.rapidapi.com/history?day=2020-04-22&country=";
+'use strict'
+const baseURL_get_country_history = "https://covid-193.p.rapidapi.com/history?day=2020-04-29&country=";
 
 function getData(type, cb) {
     var data = null;
@@ -37,30 +37,28 @@ function writeToDocument (type){
           
          data = data.response;
 
-               console.log(data);
+              
       
             let datawww = Object.entries(data);
-            //console.log(datawww);
+            
 
         var tableHeaders = getTableHeaders(data[0]);
         
        data.forEach(function(element, index, array){
            
-    
-        
-        
+              
         
         let fullData = [];
             fullData.push(array);
-     // console.log(array);
+  
           let first = array[0];
-    //console.log (first);
+
           var arr = Object.keys(first);
          
         var arrobj = arr.map(function(key){
                return {[key]: first[key]};
         });
-       // console.log(arrobj);
+       
         document.getElementById("data2").innerHTML=arrobj;
          
         })
@@ -96,16 +94,18 @@ function writeToDocument2(type){
     {
     
         data = data.response;
+            let k1 = Object.keys(data[0].deaths);
+            console.log(k1);
 
-       // console.log (data[0]);
+    console.dir(data);
+      //console.log (data[0]);
         var tableheaders2 = getTableHeaders2(data[0]);
              
         data.forEach(function(item){
             var dataRow2 =[];
             Object.keys(item.cases).forEach(function (key){
                 //console.log(item);
-                console.log (typeof(item));
-                console.log(Array.isArray(item));
+             
                 
                 dataRow2.push(`<td>${item.cases[key]}</td>`)
             });

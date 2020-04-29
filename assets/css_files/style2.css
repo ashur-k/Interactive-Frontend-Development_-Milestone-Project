@@ -181,3 +181,14 @@ and (max-device-width : 1024px)  {
     color:#fff;
      padding:5px;
 }
+
+.vl {
+  border-left: 1px solid red;
+  height: 40px;
+ 
+}
+.video-container iframe{
+    height: 630px;
+    width: 1120px;
+    
+}

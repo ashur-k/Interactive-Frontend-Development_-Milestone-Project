@@ -42,9 +42,9 @@ function writeToDocument(type) {
    el.innerHTML = "";
     getData(type, function(data) {
 
-       console.dir(data);
+    
         data = data.data.covid19Stats;
-        console.log (data);
+       
         var tableHeaders = getTableHeaders(data[0]);
 
         data.forEach(function(item){

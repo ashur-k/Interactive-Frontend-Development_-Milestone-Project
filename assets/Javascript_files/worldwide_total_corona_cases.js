@@ -1,4 +1,4 @@
-function getCoronoData(cb)  {
+function getGlobalCoronoStats(cb)  {
   
 var data = null;
 
@@ -22,19 +22,19 @@ xhr.send(data);
  
 }
 function updateJumbptron(){
-   getCoronoData (function(data){
-       console.dir(data);
+   getGlobalCoronoStats (function(data){
+       //console.dir(data);
 
     data = data.data;
 
     let date = data.lastReported.toString();
     let truncatedDate = date.substring(0, 10);
-    console.log(truncatedDate);    
+   // console.log(truncatedDate);    
 
-         document.getElementById("updateDate").innerHTML = truncatedDate;
-        document.getElementById("confirmed").innerHTML = data.confirmed;
-         document.getElementById("world_deaths").innerHTML = data.deaths;
-          document.getElementById("recovered_numbers").innerHTML = data.recovered;
+    document.getElementById("updateDate").innerHTML = truncatedDate;
+    document.getElementById("confirmed").innerHTML = data.confirmed;
+    document.getElementById("world_deaths").innerHTML = data.deaths;
+    document.getElementById("recovered_numbers").innerHTML = data.recovered;
 
    })
 }
