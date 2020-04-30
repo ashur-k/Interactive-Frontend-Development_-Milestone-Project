@@ -22,7 +22,7 @@ let country = countryName;
 
 function printflag(flagName){
 
-    console.log (flagName);
+    
     document.getElementById("img").src = `assets/Images/flag-svg/${flagName}.svg`;
 }
 

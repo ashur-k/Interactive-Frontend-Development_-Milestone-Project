@@ -111,9 +111,12 @@
 
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 button-col-css">
-						<input id="country_name" type="text" placeholder="country_name">
-						<button onclick="err_msg()">Submit</button>
-						<h6 id="err_msg">Please enter valid country name</h6>
+											
+                        <select id="select">
+                            <option value="default">Select Country</option>
+                        </select>
+						<button onclick="CheckValidCountry()">Submit</button>
+                        <h6 id="err_msg">Please selcect country name</h6>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 social-link-col-css">
 						<i class="fab fa-twitter social-links"></i>
@@ -133,19 +136,20 @@
 	</div>
 	<div class="container-xl auto-margins">
 
-		<div class="col-10 border border-warning auto-margins">
-			<h4 class="text-center">Covid-19 Detailed Analysis</h4>
+		<div class="col-10 border border-dark auto-margins">
+			<h2 class="text-center">Covid-19 Detailed Analysis</h2>
 		</div>
-		<div class="col-10 border border-warning auto-margins">
-		<h3 class="text-center">
+		<div class="col-10 border border-dark auto-margins">
+		<h2 class="text-center mt-2">
         <img id="img" src="">
-         <span id="countryName" class="text-capitalize"></span></h3><hr class="bg-warning">
+         <span id="countryName" class="text-capitalize">
+         </span></h2><hr class="bg-dark">
     
     <!--Prinitng Cases values from aPI-->
     <div class="col-12 p-3">
-        <h6 class="text-capitalize">
+        <h5 class="text-capitalize">
             <span id="cases-title"></span>
-        </h6>
+        </h5>
     </div>
     <div class="row no-gutters">
           <!--Printing new cases results-->
@@ -180,9 +184,9 @@
     </div>
     <!--Prinitng Deaths values from aPI-->
     <div class="col-12 p-3">
-        <h6>
+        <h5>
             <span id="deathsTitle" class="text-capitalize"></span>
-        </h6>
+        </h5>
     </div>
 
     <hr class="vl">
@@ -198,9 +202,9 @@
     </div>
     <!--Prinitng Tests values from aPI-->
     <div class="col-12 p-3">
-        <h6>
+        <h5>
             <span id="testsTitle" class="text-capitalize"></span>
-        </h6>
+        </h5>
     </div>
 
     <hr class="vl">	
@@ -379,7 +383,7 @@
 				</div>
 			</div>
 		</footer>
-           <script src="JsJSON.js"></script>
+        
 		<script src="assets/Javascript_files/countriesName.js"></script>
 		<script src="assets/Javascript_files/script.js"></script>
 		<script src="assets/Javascript_files/API_getData.js"></script>
