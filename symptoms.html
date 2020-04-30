@@ -24,87 +24,106 @@
 
 <body>
 	<header id="document_header" class="container-fluid">
+
 		<div class="jumbotron bg-primary jumbotron-fluid">
-			<div id="nav-div">
+			<div class="container-xl">
+            	<!--Page Navbar-->
+				<div id="nav-div">
 				<nav class="navbar my_navbar navbar-expand-lg navbar-light">
-					<span class="navbar-brand">
-                           <strong class="navbar-label">Covid-19</strong>
+						<span class="navbar-brand">
+                        <strong class="navbar-label">Covid-19</strong>
                     </span>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav">
-							<li class="nav-item ">
-								<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item active">
-								<a class="nav-link" href="symptoms.html">Symptoms</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="Covid_news.html">Covid News</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="Covid_news.html">Covid Instructions</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="Covid_instructions.html">About-me</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Contact-me</a>
-							</li>
-						</ul>
-					</div>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<ul class="navbar-nav">
+								<li class="nav-item ">
+									<a class="nav-link" href="index.html">Home
+										<span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item active">
+									<a class="nav-link" href="symptoms.html">Symptoms</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="Covid_news.html">Covid News</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Covid_instructions.html">Covid Instructions</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">About-me</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Contact-me</a>
+								</li>
+							</ul>
+						</div>
 				</nav>
-			</div>
-			<div id="title_area_jumbotron" class="container-fluid">
-				<div class="row jumbotron_title_para">
-					<p class="lead bolder">Coronavirus disease (COVID-19) is an infectious disease
-						caused by a newly discovered coronavirus.Coronavirus disease (COVID-19) is an
-						infectious diseasecaused by a newly discovered coronavirus.</p>
 				</div>
-			</div>
-			<div id="js-data">
-				<div class="row">
-					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 font-setting-for-js-data">
-						<span class="text-white"> UK Total Deaths:</span>
-						<strong><span class="text-white" id="deaths"></span></strong>
-						<hr class="custom-hr">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 font-setting-for-js-data">
-						<span class="text-white">UK Active Cases:</span>
-						<strong><span class="text-white" id="active_cases">some data</span></strong>
-						<hr class="custom-hr">
+                <!--Page Title Paragraph with all Worldwide Corono Deaths data dynimically updated from rapid api-->
+				<div class="container-xl">
+					<div class="row jumbotron_title_para">
+						<p class="lead">Coronavirus disease 2019 (COVID-19) is an infectious disease caused by
+							severe acute respiratory syndrome coronavirus 2 (SARS-COV-2). The disease
+							was first identified in December 2019 in Wuhan, the capital of China’s
+							Hubei province, and has since spread globally, resulting in the ongoing
+							2019-20 coronavirus pandemic. As of <u><span id="updateDate"></span></u>, more than
+							<u><span id="confirmed">3.06 million</span></u>
+							cases have been reported across 185 countries and territories, resulting in
+							<u> <span id="world_deaths"></span></u> deaths. More than
+							<u><span id="recovered_numbers">906,000</span></u> people have recovered.</p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 font-setting-for-js-data">
-						<span class="text-white"> UK Critical Cases: </span>
-						<strong><span class="text-white" id="critical_cases">some data</span></strong>
-						<hr class="custom-hr">
+				<!--Jumbotron Data DIV dynamically retreiving values from Rapid aPI-->
+				 <!--This JS data DIV is not neccessary but I am leeping to make things looke neater-->
+                <div>
+                    <!--Bootstrap Row is displaying COVID_19 Deaths here of selected country-->
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						    <h5 id="deaths">Deaths</h5>
+						    <hr class="custom-hr">
+						</div>
 					</div>
-					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
-						<span class="date-heading" id="today_date">2020-04-25</span>
+                     <!--Bootstrap Row is displaying COVID_19 Active Cases here of selected country-->
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+							<h5 id="active_cases">Active Cases:</h5>
+							<hr class="custom-hr">
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 button-col-css">
-						<input id="country_name" type="text" placeholder="country_name">
-						<button onclick="err_msg()">Submit</button>
-						<h6 id="err_msg">Please enter valid country name</h6>
+                        <!--Bootstrap Row is displaying COVID_19 Critical here of selected country-->
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-9">
+							<h5 id="critical_cases">Critical Cases:</h5>
+							<hr class="custom-hr">
+						</div>
+                         <!--Second Column in Bootstrap row displaying date differetnt column applied to handel media queries-->
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+							<span class="date-heading" id="today_date">Todays Date</span>
+						</div>
 					</div>
-					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 social-link-col-css">
-						<i class="fab fa-twitter social-links "></i>
-						<i class="fab fa-facebook social-links "></i>
-						<i class="fab fa-linkedin social-links "></i>
+                    <!--Select BOX with button and hidden error message wrapped withing bootstrap row-->
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-9 button-col-css">
+							<select id="select">
+                            <option value="default">Select Country</option>
+                            </select>
+							<button onclick="CheckValidCountry()">Submit</button>
+							<h6 id="err_msg">Please selcect country name</h6>
+						</div>
+                         <!--Social-Links wrapped inside bootstrap row columns are balanced with select box row-->
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 social-link-col-css">
+							<i class="fab fa-twitter social-links"></i>
+							<i class="fab fa-facebook social-links"></i>
+							<i class="fab fa-linkedin social-links"></i>
+						</div>
 					</div>
 				</div>
 
 			</div>
 		</div>
+
 	</header>
 	<!--Page Title Jumbotron-->
 	<div class="jumbotron bg-light jumbotron-fluid">
@@ -113,10 +132,6 @@
 			<p class="lead"></p>
 		</div>
 	</div>
-
-
-
-
 	<!--
     NHS SYMPTOMS AND INTRUCTIONS
 -->

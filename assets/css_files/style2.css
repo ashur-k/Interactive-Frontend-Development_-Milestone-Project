@@ -9,7 +9,10 @@
                                     /*Header Area*/
 /*.navbar-label is a class given to strong html tag to give custom settings to page logo {COVID-19}*/
 .navbar-label{
-        font-size: 45px;
+        font-size: 40px;
+        background-color: #333;
+        color: #fff;
+        padding: 8px;
         
     }                    
 /*#document_header to make sure headers not scroll on different screen sizes*/
@@ -22,19 +25,20 @@
 
 /*.my_navbar a: gives custom styling to bootstrap navbar */
 .my_navbar a {
-    color:#000 !important;
+    color:#fff !important;
     padding: 2px;
     margin: 2px;
     text-align: center;
     font-size: 18px;
+    font-weight: 600;
     font-style: bolder!important;
     }
 /*.my_navbar  a:hover: gives hovering eddfect to Navbar navigation links */
 .my_navbar  a:hover {
-    background-color: lavenderblush;
+    background-color: #333;
 }
 .active {
-    background-color: lavenderblush;
+    background-color: #333;
 }
 /*navbar is a part of Jumbotron I have designed it in this way*/
 /*.jumbotron is to give custom settings to web page*/
@@ -44,6 +48,12 @@
    
     overflow: hidden;
     }
+    .title-para{
+            line-height: 50px;
+            word-spacing: 1px;
+            color: rgb(221, 227, 236);
+    }
+  
 /*these settings are given to social link to control their sizing colour and padding, hovering etc..*/
  
  i{
@@ -174,7 +184,7 @@ and (max-device-width : 1024px)  {
 .heading-hr{
     height: 5px;
     width:100%;
-    background-color: #2e82d5;
+    background-color: #333;
 }
 .card-title{
     background-color:#2e82d5; 
