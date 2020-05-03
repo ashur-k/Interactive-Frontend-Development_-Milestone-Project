@@ -38,7 +38,8 @@ function writeToDocument(type) {
     var tableRows = [];
    var el = document.getElementById("data");
    el.innerHTML = "";
-    getData(type, function(data) {
+   
+   getData(type, function(data) {
 
     
         data = data.data.covid19Stats;

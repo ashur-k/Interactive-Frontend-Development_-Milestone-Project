@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+body{
+    padding: 0%;
+    margin: 0%;
+
+}
+.navbar-brand{
+    font-family: fantasy Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: #500B0C !important;
+}
+
+.nav-link{
+    font-size: 16px;
+    margin: 8px;
+    color: #500B0C!important;
+    font-family: 'Roboto Condensed';
+    
+}
+.nav-link:hover{
+color: #500B0C !important;
+
+}
+.active .nav-link {
+    color: rgb(116, 37, 37);
+}
+
+.menu-right-date{
+    padding: 10px 36px;
+    margin-right: 3px;
+    background-color: transparent;
+    transition: all 300ms ease-in;
+    color: #500B0C !important;
+
+}
+.menu-right-date:hover{
+    border-color: #500B0C !important;
+
+}
+.covid-19-title-div{
+    background-image:url(../images/img4.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+.covid-19-title, .covid-19-title-para{
+    color: honeydew;
+    font-family: 'Righteous';
+}
+.covid-19-title{
+    margin-top: 20%;
+    margin-bottom: 6%;
+    font-size: 60px;
+    color: #500B0C;
+}
+.covid-19-title-para{
+  
+   font-size: 18px;
+   color: #FFFFFF;
+}
+.confirmed-deaths{
+   
+    background-color: black;
+   color: #FFF !important;
+   border-radius: 5px;
+   margin-left: 10%;
+}
+.world-deaths{
+    background-color: white;
+    color: #000;
+    border-radius: 5px;
+}
+.world-recovered{
+    background-color: #000;
+   color: #FFF !important;
+   border-radius: 5px;
+}
+.confirmed-deaths, .world-deaths, .world-recovered{
+    margin-top: 5%;
+    margin-bottom: 40%;
+      margin-left: 0%;
+}
+#err_msg{
+    display: none;
+}
+.section-1 .heading-1{
+    margin-top: 4%;
+
+}
+.section-1 .heading-2{
+    margin-bottom: 2%;
+    font-size: 39px;
+
+}
+.section-1 .para-1{
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 1%;
+
+}
+
+.section-1 .card-text, .para-1{
+    color: rgba(0, 0, 0, 0.59);
+}
+.section-1{
+    margin-bottom: 4%;
+}
+.card {
+    width: 20rem;
+}
+#img{
+    width: 6%;
+    padding-bottom: 6px;
+
+}
+.section-2 .container-fluid{
+    background-image: url(../images/img4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section-2 .heading-1{
+    margin-top: 20%;
+    margin-bottom: 4%;
+    font-family: 'Righteous';
+    width: 80%;
+    color: whitesmoke;
+}
+.section-2 .para{
+    width: 80%;
+    font-family: 'ubuntu';
+    color: whitesmoke;
+    margin-bottom: 7%;
+}
+.section-2 .btn{
+    margin-bottom: 15%;
+    width: 30%;
+    padding: 2% 5%;
+}
+
+.section-3{
+    margin-top: 6%;
+
+}
+.section-3 i{
+    color: rgb(221, 76, 76) !important;
+}
+.section-3 p{
+    color: rgba(0,0,0,0.59)
+}
+
+.section-4{
+    margin-top: 8%;
+
+}
+
+.section-4 .row .col-md-7, .col-md-5{
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+}
+
+.section-4 a{
+    color: lightseagreen;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+.section-4 .para-1{
+    color: white;
+    font-family: 'Roboto Condensed';
+    margin-top: 5%;
+    font-size: 18px;
+}
+
+.social i{
+    color: rgb(221, 76, 76) !important;
+    font-size: 20px;
+}
+/*Tablet Devices*/
+@media screen and (max-width: 768px){
+    .section-1 .card{
+        width: 20rem;
+    }
+    .section-4 .col-md-7 img{ 
+        width: 350px;
+    }
+}
+/*Mobile Devices*/
+@media screen and (max-width: 320px){
+    .site-content .site-title{
+        font-size: 30px;
+        padding: 15%;
+    }
+
+    .site-content .site-btn2{
+        display: none;
+    }
+
+    .site-content .site-btn1{
+        margin-left: 15%;
+    }
+
+    .section-1 .heading-1, .section-1 .heading-2{
+        font-size:25px;
+    }
+
+    .section-1 .col-md-4{
+        padding: 5%;
+        margin-left: 8%;
+    }
+
+    .section-1 .card{
+        width: 15rem;
+    }
+    .section-4 .col-md-5{
+        padding: 0% 15%;
+    }
+    footer input[type="button"]{
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .site-content .site-title{
+        font-size: 30px;
+        padding: 15%;
+    }
+
+    .site-content .site-btn2{
+        display: none;
+    }
+
+    .site-content .site-btn1{
+        margin-left: 15%;
+    }
+
+    .section-1 .heading-1, .section-1 .heading-2{
+        font-size:25px;
+    }
+
+    .section-1 .col-md-4{
+        padding: 5%;
+        margin-left: 8%;
+    }
+
+    .section-1 .card{
+        width: 20rem;
+    }
+    .section-4 .col-md-5{
+        padding: 0% 15%;
+    }
+    footer input[type="button"]{
+        margin-top: 5%;
+    }
+}
+
+
+

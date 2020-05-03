@@ -21,9 +21,7 @@ let country = countryName;
 }
 
 function printflag(flagName){
-
-    
-    document.getElementById("img").src = `assets/Images/flag-svg/${flagName}.svg`;
+      document.getElementById("img").src = `assets/Images/flag-svg/${flagName}.svg`;
 }
 
 
@@ -62,18 +60,18 @@ function printToDocument(countryName){
     
 //Getting Cases data values to print on HTML5 page, these values are going to span ids on html5 page
     
-    let newCases = data[0].cases.new;
-    let activeCases = data[0].cases.active;
-    let criticalCases = data[0].cases.critical;
-    let recoveredCases = data[0].cases.recovered;
-    let totalCases = data[0].cases.total;
+    let newCasesNum = data[0].cases.new;
+    let activeCasesNum = data[0].cases.active;
+    let criticalCasesNum = data[0].cases.critical;
+    let recoveredCasesNum = data[0].cases.recovered;
+    let totalCasesNum = data[0].cases.total;
           //Printing above data values entries on html page
        
-    document.getElementById("casesValue0").innerHTML = newCases;  
-    document.getElementById("casesValue1").innerHTML = activeCases;   
-    document.getElementById("casesValue2").innerHTML = criticalCases;     
-    document.getElementById("casesValue3").innerHTML = recoveredCases;  
-    document.getElementById("casesValue4").innerHTML = totalCases;
+    document.getElementById("casesValue0").innerHTML = newCasesNum;  
+    document.getElementById("casesValue1").innerHTML = activeCasesNum;   
+    document.getElementById("casesValue2").innerHTML = criticalCasesNum;     
+    document.getElementById("casesValue3").innerHTML = recoveredCasesNum;  
+    document.getElementById("casesValue4").innerHTML = totalCasesNum;
 
 //Getting Deaths data values to print on HTML5 page, these values are going to span ids on html5 page
 
@@ -83,10 +81,10 @@ function printToDocument(countryName){
  document.getElementById("deathsKey0").innerHTML = deathsNewTitleKey;  
   document.getElementById("deathsKey1").innerHTML = deathsTotalKey ;  
 
-        let newDeaths = data[0].deaths.new; 
-        let deaths = data[0].deaths.total;   
-         document.getElementById("deathsValue0").innerHTML = newDeaths;
-          document.getElementById("deathsValue1").innerHTML = deaths;
+        let newDeathsNum = data[0].deaths.new; 
+        let totalDeathsNum = data[0].deaths.total;   
+         document.getElementById("deathsValue0").innerHTML = newDeathsNum;
+          document.getElementById("deathsValue1").innerHTML = totalDeathsNum;
         
     let testsTotalKey = Object.keys(data[0].tests)[0];  
   document.getElementById("testsKey0").innerHTML = testsTotalKey;  
@@ -96,15 +94,10 @@ function printToDocument(countryName){
         let totalTests = data[0].tests.total;   
     document.getElementById("testsValue0").innerHTML = totalTests;  
 
-//testsKey0
-     
+    
+   updateChart(totalCasesNum, totalDeathsNum, recoveredCasesNum, countryName);
+   
 
-        //Theses values are printed on page title jumbotron
-     
-        document.getElementById("deaths").innerHTML = `${countryName} Total Deaths: ${deaths}`;
-        document.getElementById("active_cases").innerHTML = `${countryName} Active Cases: ${activeCases}`;
-        document.getElementById("critical_cases").innerHTML = `${countryName} Critical Cases: ${criticalCases}`;
-       
     })
     
      
@@ -125,4 +118,4 @@ return today;
 }
 
 
- document.getElementById("today_date").innerHTML = getDate(); 
+ /*document.getElementById("today_date").innerHTML = getDate(); */

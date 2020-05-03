@@ -23,7 +23,7 @@ xhr.send(data);
 }
 function updateJumbptron(){
    getGlobalCoronoStats (function(data){
-       //console.dir(data);
+ 
 
     data = data.data;
 
