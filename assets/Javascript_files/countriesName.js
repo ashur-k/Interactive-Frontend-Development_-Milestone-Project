@@ -45,9 +45,10 @@ function CheckValidCountry() {
 
     var country_name = document.getElementById("select").value;
     if (country_name == "default") {
-        document.getElementById("err_msg").style.display = "block";
+        document.getElementById("err_msg").style.display = "inline-block";
         document.getElementById("select").style.border = "1px solid red";
     } else {
+          document.getElementById("select").style.border = "1px solid black";
         document.getElementById("err_msg").style.display = "none";
        /* document.getElementById("data").innerHTML = "";*/
        /* writeToDocument(country_name)*/

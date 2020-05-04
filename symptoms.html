@@ -1,353 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="https://kit.fontawesome.com/60ca92335a.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/css_files/style.css">
-	<link rel="stylesheet" href="assets/css_files/style2.css">
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-	</script>
-	<title>Symptoms Page</title>
-</head>
 
-<body>
-	<header id="document_header" class="container-fluid">
-
-		<div class="jumbotron bg-primary jumbotron-fluid">
-			<div class="container-xl">
-            	<!--Page Navbar-->
-				<div id="nav-div">
-				<nav class="navbar my_navbar navbar-expand-lg navbar-light">
-						<span class="navbar-brand">
-                        <strong class="navbar-label">Covid-19</strong>
-                    </span>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-						<div class="collapse navbar-collapse" id="navbarNav">
-							<ul class="navbar-nav">
-								<li class="nav-item ">
-									<a class="nav-link" href="index.html">Home
-										<span class="sr-only">(current)</span></a>
-								</li>
-								<li class="nav-item active">
-									<a class="nav-link" href="symptoms.html">Symptoms</a>
-								</li>
-								<li class="nav-item ">
-									<a class="nav-link" href="Covid_news.html">Covid News</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="Covid_instructions.html">Covid Instructions</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">About-me</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Contact-me</a>
-								</li>
-							</ul>
-						</div>
-				</nav>
-				</div>
-                <!--Page Title Paragraph with all Worldwide Corono Deaths data dynimically updated from rapid api-->
-				<div class="container-xl">
-					<div class="row jumbotron_title_para">
-						<p class="lead">Coronavirus disease 2019 (COVID-19) is an infectious disease caused by
-							severe acute respiratory syndrome coronavirus 2 (SARS-COV-2). The disease
-							was first identified in December 2019 in Wuhan, the capital of China’s
-							Hubei province, and has since spread globally, resulting in the ongoing
-							2019-20 coronavirus pandemic. As of <u><span id="updateDate"></span></u>, more than
-							<u><span id="confirmed">3.06 million</span></u>
-							cases have been reported across 185 countries and territories, resulting in
-							<u> <span id="world_deaths"></span></u> deaths. More than
-							<u><span id="recovered_numbers">906,000</span></u> people have recovered.</p>
-					</div>
-				</div>
-				<!--Jumbotron Data DIV dynamically retreiving values from Rapid aPI-->
-				 <!--This JS data DIV is not neccessary but I am leeping to make things looke neater-->
-                <div>
-                    <!--Bootstrap Row is displaying COVID_19 Deaths here of selected country-->
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-						    <h5 id="deaths">Deaths</h5>
-						    <hr class="custom-hr">
-						</div>
-					</div>
-                     <!--Bootstrap Row is displaying COVID_19 Active Cases here of selected country-->
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-							<h5 id="active_cases">Active Cases:</h5>
-							<hr class="custom-hr">
-						</div>
-					</div>
-                        <!--Bootstrap Row is displaying COVID_19 Critical here of selected country-->
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-9">
-							<h5 id="critical_cases">Critical Cases:</h5>
-							<hr class="custom-hr">
-						</div>
-                         <!--Second Column in Bootstrap row displaying date differetnt column applied to handel media queries-->
-						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
-							<span class="date-heading" id="today_date">Todays Date</span>
-						</div>
-					</div>
-                    <!--Select BOX with button and hidden error message wrapped withing bootstrap row-->
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-9 button-col-css">
-							<select id="select">
-                            <option value="default">Select Country</option>
-                            </select>
-							<button onclick="CheckValidCountry()">Submit</button>
-							<h6 id="err_msg">Please selcect country name</h6>
-						</div>
-                         <!--Social-Links wrapped inside bootstrap row columns are balanced with select box row-->
-						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 social-link-col-css">
-							<i class="fab fa-twitter social-links"></i>
-							<i class="fab fa-facebook social-links"></i>
-							<i class="fab fa-linkedin social-links"></i>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-	</header>
-	<!--Page Title Jumbotron-->
-	<div class="jumbotron bg-light jumbotron-fluid">
-		<div class="container">
-			<h1 class="display-4 text-uppercase text-dark">Covid-19 Symptoms and Instructions to follow if you are infected</h1>
-			<p class="lead"></p>
-		</div>
-	</div>
-	<!--
-    NHS SYMPTOMS AND INTRUCTIONS
--->
-	<div id="NHS-Advise" class="container-xl">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<h1>UK, National Health Service:</h1>
-				<hr class="heading-hr">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<p class="lead text-white"><mark class="text-danger"><strong>Common
-                 symptoms: You may have coronovirus if you have either of the following 
-                 symptoms, however mild:</strong></mark>
-				</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-				<div class="card">
-					<div class="card-body text-center high-temperature">
-						<h5 class="card-title">High Temperature</h5>
-						<p class="card-text">This means you feel hot to touch on your chest or back
+Covid-19 Symptoms and Instructions to follow if you are infected</h1>
+		
+		
+        
+        
+        >This means you feel hot to touch on your chest or back
 							(you do not need to measure your temperature).
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-				<div class="card">
-					<div class="card-body high-temperature">
-						<h5 class="card-title text-center card-title">A new continuous cough</h5>
+		
+        
+        
+        A new continuous cough</h5>
 						<p class="card-text">This means coughing a lot for more than an hour, or 3 or more coughing
 							episodes in 24 hours (if you usually have a cough, it may be worse than usual).
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<p class="lead">Anyone who has these symptoms must stay at home until the symptoms have ended, and in
+		
+        
+        >          Anyone who has these symptoms must stay at home until the symptoms have ended, and in
 					all cases for at least seven days. Everyone else in the household must stay at home for at least
 					14 days after the first person symptoms appear, even if they themselves do not have symptoms. if
 					Anyone else develops symptoms during that time, that individual must stay home for an additional
 					seven days from when they developed symptoms. Once seven days passed and provided symptoms have
 					ended, they no longer need to isolate.
-				</p>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<div class="card-body border border-success">
+			
 					<p class="lead">Do not go to a GP surgery, pharmacy or hospital</p>
 					<p class="lead">Use <mark><strong>NHS online services</strong></mark>. Only call <mark><strong>111</strong></mark> if you are not 
                     able to get online, you have been instructed to call, or you symptoms worsen</p>
                     <p class="lead">Call <mark><strong>999</strong></mark> if you have a serious or life-thratening emergecy
                     , and tell the call adviser i you have coronovirus symptoms</p>
-				</div>
-			</div>
-
-		</div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				
                 <h3 class="text-danger">Advice for those who are 70 and over, have an underlying health condiotion or are pregnant</h3>
                <p>People who are 70 and over, or those who an underlying health condition, are likely to 
                be more seriously affecte. it si even more importatnt that you protect yourself now by following the advice above
-               </p>
-               <p>
+              
                     if you are at very high risk due to a serious underlying health condition, you should already receive a letter from t NHS containing 
                     specific guidance about what to do.
-               </p>
-               
-            <p>
+           
                 if you need a shopping or medication, ask family, friends or neighbours to drop these at the 
                 door, or if possible, order online. Use NHS online services or the NHS app to book appiontments 
                 or order repeat prescriptions - only phone if this is not possible.
-            </p>
-            <p>
+           
             GP consultation should be done over the phone or online, to minimise risk to you and other patients.
             GP practices may be postpone non-urgent health checks or routine appiontments.
-            </p>
-                        <p>
+          
             There is helpful information and advice for pregnanat women about coronovirus on the Royal
             College of Obstetricians and Gynaecologist's website.
-            </p>
-            
-            </div>
-        </div>
-	</div>
-
-	<!--
-    WHO SYMPTOMS AND INTRUCTIONS
+    
 -->
-	<div id="WHO-Advise" class="container-xl">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<h1>World Health Organisation</h1>
-				<hr class="heading-hr">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<p class="lead"><mark class="text-danger"><strong>The COVID-19 virus affects different people in
+	The COVID-19 virus affects different people in
 					different ways. COVID-19 is a respiratory disease and most infected
 					people will develop mild to moderate symptoms and recover without
 					requiring special treatment. People who have underlying medical
 					conditions and those over 60 years old have a higher risk of developing
 					severe disease and death.
-		</strong></mark> </p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-				<h5>Common Symptoms Include</h5>
-				<ul class="footer-contact-me-list">
-					<li>Fever</li>
-					<li>Tiredness</li>
-					<li>Dry cough</li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-				<h5>Other Symptoms Include</h5>
-				<ul class="footer-contact-me-list">
-					<li>Shortness of breath, Aches and pains</li>
-
-					<li>Sore throath</li>
-					<li>diarrhoea, nausea or a runny nose.</li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<p class="lead">
+		
 					People with mild symptoms who are otherwise healthy should self-isolate and contact
 					their medical provider or a COVID-19 information line for advice on testing and referral.
-				</p>
-			</div>
-		</div>
-	</div>
-	<div id="data" class="container-fluid">
-	</div>
-	<a href="UK_stats.html">United Kingdom Stats</a><br>
-	<a href="second_page.html">second page</a>
-	<footer id="footer" class="container-fluid bg-grey">
-		<div class="row ">
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4  footer-cols">
-				<div class="row">
-					<div class="col-12">
-						<h6>About this project</h6>
-					</div>
-					<div class="col-12">
-						<p class="p-font">Coronavirus has dratistically affected lives of many and others who
-							are saved from this virus are locked inside their houses to protect them selves
-							In current situation I am encouraged to gather reliable data about this virus and
-							also give facts collecting from reliable API.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 footer-cols">
-				<div class="row">
-					<div class="col-12">
-						<h6>About-me</h6>
-					</div>
-					<div class="col-12 ">
-						<div class="d-flex align-items-start ">
-							<p class="p-font">I am a computer Programmer, at the moment I am doing Full-stack
-								webdevelopment
-								course.
-								This web is my project for fornt end web devlopment module. I am a graduate from
-								Pakistan
-								International
-								Institute Management and Science</p>
-						</div>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 footer-cols">
-				<div class="row">
-					<div class="col-12">
-						<h6>Contact-me</h6>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<div class="col-12">
-								<ul class="footer-contact-me-list">
-									<li class="">Ashur Kanwal</li>
-									<li class="">ashurkanwal@yahoo.com</li>
-									<li class="">Phone number</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-12">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row bg-light-grey auto-margins">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 auto-margins">
-					<p class="text-center ">&#169; Copyright 2020 </p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<script src="assets/Javascript_files/countriesName.js"></script>
-	<script src="assets/Javascript_files/script.js"></script>
-	<script src="assets/Javascript_files/API_getData.js"></script>
-
-</body>
-
-
-
-
-
-</html>
+		

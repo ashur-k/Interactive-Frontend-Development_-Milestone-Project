@@ -83,6 +83,8 @@ color: #500B0C !important;
 }
 #err_msg{
     display: none;
+    
+    color: red;
 }
 .section-1 .heading-1{
     margin-top: 4%;
@@ -154,6 +156,13 @@ color: #500B0C !important;
     margin-top: 8%;
 
 }
+.custom-height{
+    height: 300px !important;
+}
+
+.custom-btn {
+    width: 178px !important;
+}
 
 .section-4 .row .col-md-7, .col-md-5{
     margin-top: 10%;
@@ -163,7 +172,7 @@ color: #500B0C !important;
 
 .section-4 a{
     color: lightseagreen;
-    font-size: 32px;
+    font-size: 18px;
     text-decoration: none;
 }
 
