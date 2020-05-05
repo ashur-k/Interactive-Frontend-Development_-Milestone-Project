@@ -75,23 +75,23 @@
 						<h1 class="covid-19-title text-center">Covid-19 Pandemic 2019-2020</h1>
 						<p class="covid-19-title-para text-center m-5">Coronavirus disease 2019 (COVID-19)
 							is an infectious disease caused by severe acute respiratory syndrome
-							<br>coronavirus 2 (SARS-COV-2).
-                        </p>
-							<div id="world-stats" class="d-flex flex-row custom-column text-center">
-								<div class="p-2 bd-highlight">
-									<h6 class=" confirmed-deaths px-4 py-3 mr-4 text-center">Total World
-										<span id="confirmed" ></span> Cases</h6>
-								</div>
-								<div class="p-2 bd-highlight">
-									<h6 class="world-deaths px-4 py-3 mr-4 text-center">Total World
-										<span id="world_deaths" ></span> Deaths</h6>
-								</div>
-								<div class="p-2 bd-highlight">
-									<h6 class="world-recovered px-4 py-3 mr-4 text-center">Total World
-										<span id="recovered_numbers"> </span> Recovered</h6>
-								</div>
-
+							coronavirus 2 (SARS-COV-2).
+						</p>
+						<div id="world-stats" class="d-flex flex-row custom-column justify-content-center">
+							<div class="p-2 bd-highlight">
+								<h6 class=" confirmed-deaths px-4 py-3 mr-4 text-center">Total World
+									<span id="confirmed" ></span> Cases</h6>
 							</div>
+							<div class="p-2 bd-highlight">
+								<h6 class="world-deaths px-4 py-3 mr-4 text-center">Total World
+									<span id="world_deaths" ></span> Deaths</h6>
+							</div>
+							<div class="p-2 bd-highlight">
+								<h6 class="world-recovered px-4 py-3 mr-4 text-center">Total World
+									<span id="recovered_numbers"> </span> Recovered</h6>
+							</div>
+
+						</div>
 					</div>
 				</div>
 			</div>
@@ -198,7 +198,7 @@
 		<div class="section-2">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
 						<canvas id="myChart"></canvas>
 					</div>
 					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -285,17 +285,17 @@
 							<img id="instructions-img"  src="images/img9.jpg" class="img-fluid"  alt="Image-7"  >
                     </div>
 							<div class="col-md-5">
-								<h1 class="text-white">Instructions if you have symptoms</h1>
+								<h1 id="instructions-heading" class="text-white">Instructions if you have symptoms</h1>
 								<a onclick="changefuncHealthyPeople()">Healthy People /</a>
 								<a onclick="changefuncOldPeople()">Old People /</a>
-								<a href="#">Health condition</a>
+								<a onclick="changefuncPeopleHealthcondi()">Pregnant women /</a>
+                                <a onclick="changefuncchilderenandfamilies()">Children and Families</a>
 								<p id="instructions-para" class="para-1">
 									The single most important action you can take is to stay at Home in order to protect
 									and save lives.
 								</p>
-
+                                <a id="info-button" href="https://www.nhs.uk/" class="btn btn-danger" target="_blank">For more information visit NHS</a>
 							</div>
-
 						</div>
 
 					</div>
@@ -307,26 +307,32 @@
 	<footer>
 		<div class="section-5 text-center">
 			<h4 style="margin-top: 5%;">About-me</h4>
-			<h6 class="my-4">I am student programmer and I am developing <br>this project for student submission project. If you have any idea to
-				<br>update this project or team up for another project please don,thesitate to contact me</h6>
-
-				<div class="form-inline justify-content-center">
-					<input type="text" name="Email" id="email" placeholder="Email" size="40" class="form-control px-4 py-2">
-					<input type="button" value="Contact-us" class="btn btn-danger px-4 py-2">
-            </div>
-					<div class="social" style="margin: 5%;">
-						<div class="d-flex flex-row justify-content-center">
-							<i class="fab fa-twitter m-2"></i>
-							<i class="fab fa-facebook m-2"></i>
-							<i class="fab fa-linkedin m-2"></i>
-						</div>
-					</div>
-					<hr>
-					<h5 style="color: lightseagreen;">Covid-19 &copy;</h5>
+			<div class="row justify-content-center">
+				<div class="col-xs-2 col-sm-2 col-md-8 col-lg-6 col-xl-6 text-center">
+					<p class="my-6 p-0 text-center footer-para">I am student programmer and I am developing this project
+						for student submission project. If you have any idea to
+						update this project or team up for another project please don,thesitate to contact me</p>
 				</div>
+			</div>
+
+
+			<div class="form-inline justify-content-center">
+				<input type="text" name="Email" id="email" placeholder="Email" size="40" class="form-control px-4 py-2">
+				<input type="button" value="Contact-us" class="btn btn-danger px-4 py-2">
+            </div>
+				<div class="social" style="margin: 5%;">
+					<div class="d-flex flex-row justify-content-center">
+						<i class="fab fa-twitter m-2"></i>
+						<i class="fab fa-facebook m-2"></i>
+						<i class="fab fa-linkedin m-2"></i>
+					</div>
+				</div>
+				<hr>
+				<h5 style="color: lightseagreen;">Covid-19 &copy;</h5>
+			</div>
 	</footer>
 
-    
+
 
 	<script src="https://unpkg.com/scrollreveal"></script>
 

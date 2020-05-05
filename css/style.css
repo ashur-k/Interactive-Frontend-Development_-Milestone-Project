@@ -60,7 +60,8 @@ color: #500B0C !important;
 }
 .covid-19-title-para{
   
-   font-size: 18px;
+   font-size: 22px;
+  
    color: #FFFFFF;
 }
 .confirmed-deaths{
@@ -69,7 +70,7 @@ color: #500B0C !important;
      opacity: 0.8;
    color: #FFF !important;
    border-radius: 5px;
-   margin-left: 10%;
+
 }
 .world-deaths{
     background-color: white;
@@ -85,8 +86,8 @@ color: #500B0C !important;
 }
 .confirmed-deaths, .world-deaths, .world-recovered{
     margin-top: 5%;
-    margin-bottom: 40%;
-      margin-left: 0%;
+    margin-bottom: 50%;
+      
 }
 #err_msg{
     display: none;
@@ -189,10 +190,24 @@ color: #500B0C !important;
     margin-top: 5%;
     font-size: 18px;
 }
+#info-button{
+    color: white !important;
+}
+
 
 .social i{
     color: rgb(221, 76, 76) !important;
     font-size: 20px;
+}
+.section-5 {
+    overflow: hidden !important;
+    padding: 5px;
+}
+.footer-para{
+      margin-top: 4%; 
+    margin-bottom: 8%; 
+    font-size: 22px;
+    font-weight: 400;
 }
 /*Tablet Devices*/
 @media screen and (max-width: 768px){
@@ -250,14 +265,12 @@ color: #500B0C !important;
   .confirmed-deaths, .world-deaths, .world-recovered{
     margin-top: 0%;
     margin-bottom:2%;
-    margin-left: 9%;
+    margin-left: 7%;
      
 }
-
-    .site-content .updateDate{
-        margin-left: 15%;
-    }
-
+.world-recovered{
+    margin-bottom: 10%;
+}
     .section-1 .heading-1, .section-1 .heading-2{
         font-size:25px;
     }
@@ -275,7 +288,7 @@ color: #500B0C !important;
     .section-1 .card{
          width: 20rem;
          padding: 25px;
-         margin-left: 5%;
+         margin-left: 12%;
          margin-top: 5%;
     }
     .section-4 .col-md-5{
@@ -283,6 +296,11 @@ color: #500B0C !important;
     }
     footer input[type="button"]{
         margin-top: 5%;
+    }
+    
+    .covid-19-title-para{
+        font-size: 16px;
+        margin-top: 0%;
     }
 }
 
