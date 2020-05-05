@@ -5,10 +5,14 @@ body{
     margin: 0%;
 
 }
+main {
+    overflow: hidden;
+}
 .navbar-brand{
     font-family: fantasy Arial, Helvetica, sans-serif;
     font-size: 35px;
     color: #500B0C !important;
+   
 }
 
 .nav-link{
@@ -62,6 +66,7 @@ color: #500B0C !important;
 .confirmed-deaths{
    
     background-color: black;
+     opacity: 0.8;
    color: #FFF !important;
    border-radius: 5px;
    margin-left: 10%;
@@ -69,10 +74,12 @@ color: #500B0C !important;
 .world-deaths{
     background-color: white;
     color: #000;
+     opacity: 0.8;
     border-radius: 5px;
 }
 .world-recovered{
     background-color: #000;
+    opacity: 0.8;
    color: #FFF !important;
    border-radius: 5px;
 }
@@ -190,6 +197,7 @@ color: #500B0C !important;
 /*Tablet Devices*/
 @media screen and (max-width: 768px){
     .section-1 .card{
+
         width: 20rem;
     }
     .section-4 .col-md-7 img{ 
@@ -197,6 +205,7 @@ color: #500B0C !important;
     }
 }
 /*Mobile Devices*/
+/*
 @media screen and (max-width: 320px){
     .site-content .site-title{
         font-size: 30px;
@@ -230,19 +239,22 @@ color: #500B0C !important;
         margin-top: 5%;
     }
 }
-
+*/
 @media only screen and (max-width: 600px) {
     
-    .site-content .site-title{
+    .covid-19-title-div .covid-19-title{
         font-size: 30px;
         padding: 15%;
     }
 
-    .site-content .site-btn2{
-        display: none;
-    }
+  .confirmed-deaths, .world-deaths, .world-recovered{
+    margin-top: 0%;
+    margin-bottom:2%;
+    margin-left: 9%;
+     
+}
 
-    .site-content .site-btn1{
+    .site-content .updateDate{
         margin-left: 15%;
     }
 
@@ -255,8 +267,16 @@ color: #500B0C !important;
         margin-left: 8%;
     }
 
+    .custom-column{
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+    }
+
     .section-1 .card{
-        width: 20rem;
+         width: 20rem;
+         padding: 25px;
+         margin-left: 5%;
+         margin-top: 5%;
     }
     .section-4 .col-md-5{
         padding: 0% 15%;
@@ -266,5 +286,11 @@ color: #500B0C !important;
     }
 }
 
+
+
+
+
+
+  
 
 

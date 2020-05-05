@@ -54,10 +54,10 @@ jQuery(document).ready(function () {
             windowScrollPosBottom = windowHeight + windowScrollPosTop;
 
 
-        jQuery("ul li").revealOnScroll("right", 9000);
+        jQuery("ul li").revealOnScroll("right", 1000);
          // jQuery(".section-1").revealOnScroll();
        
-         jQuery("#myChart").revealOnScroll("right");
+     
          
     });
 

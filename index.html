@@ -22,6 +22,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
 	<link rel="stylesheet" href="css/style.css">
+
 	<title> Practice Document</title>
 </head>
 
@@ -66,25 +67,30 @@
 
 	</header>
 
-	<main class="section-main">
+	<main>
 		<div class="container-fluid p-0">
 			<div class="covid-19-title-div">
 				<div class="d-flex justify-content-center">
 					<div class="d-flex flex-column">
 						<h1 class="covid-19-title text-center">Covid-19 Pandemic 2019-2020</h1>
-						<p class="covid-19-title-para text-center">Coronavirus disease 2019 (COVID-19)
+						<p class="covid-19-title-para text-center m-5">Coronavirus disease 2019 (COVID-19)
 							is an infectious disease caused by severe acute respiratory syndrome
-							<br>coronavirus 2 (SARS-COV-2). The disease was first identified in December 2019
-							<br> in Wuhan, the capital of China’s Hubei province, and has since spread
-                        globally, resulting in the ongoing 2019-20 <br>coronavirus pandemic.
-                    </p>
-							<div class="d-flex flex-row text-center">
-								<h6 class=" confirmed-deaths px-4 py-3 mr-4 text-center">Total World
-									<span id="confirmed" ></span> Cases</h6>
-								<h6 class="world-deaths px-4 py-3 mr-4 text-center">Total World
-									<span id="world_deaths" ></span> Deaths</h6>
-								<h6 class="world-recovered px-4 py-3 mr-4 text-center">Total World
-									<span id="recovered_numbers"> </span> Recovered</h6>
+							<br>coronavirus 2 (SARS-COV-2).
+                        </p>
+							<div id="world-stats" class="d-flex flex-row custom-column text-center">
+								<div class="p-2 bd-highlight">
+									<h6 class=" confirmed-deaths px-4 py-3 mr-4 text-center">Total World
+										<span id="confirmed" ></span> Cases</h6>
+								</div>
+								<div class="p-2 bd-highlight">
+									<h6 class="world-deaths px-4 py-3 mr-4 text-center">Total World
+										<span id="world_deaths" ></span> Deaths</h6>
+								</div>
+								<div class="p-2 bd-highlight">
+									<h6 class="world-recovered px-4 py-3 mr-4 text-center">Total World
+										<span id="recovered_numbers"> </span> Recovered</h6>
+								</div>
+
 							</div>
 					</div>
 				</div>
@@ -95,24 +101,21 @@
 			<div class="container text-center">
 				<h1 class="heading-1">Covid-19</h1>
 				<h1 class="heading-2">Detailed Analysis</h1>
-			
 				<div class="container text-center">
 					<div class="row justify-content-center ">
 						<div class="form-row col-xs-2">
-                       <select id="select" class="country_listcustom-select w-1 mr-sm-2 p-2" size="1">
+							<select id="select" class="country_listcustom-select w-1 mr-sm-2 p-2" size="1">
                             <option value="default">Select Country</option>
                         </select>
-						<button onclick="CheckValidCountry()" class="btn btn-primary m-2 p-2">Submit</button>
-						
-					
-                          <h6 id="err_msg">Please select a country</h6></div>
-                        </div>
-                      
-				
+							<button onclick="CheckValidCountry()" class="btn btn-primary m-2 p-2">Submit</button>
+							<h6 id="err_msg">Please select a country</h6>
+						</div>
+					</div>
+
 					<hr class="bg-dark">
 					<div class="row justify-content-center">
-						
-                        <div class="col-xs-2">
+
+						<div class="col-xs-2">
 
 							<img id="img" src="" alt="flag loading">
 							<span id="countryName" class="text-capitalize">Country Name</span>
@@ -122,7 +125,7 @@
 				</div>
 				<div class="row justify-content-center text-center">
 
-					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+					<div class="col-xs-12 col-sm-8 col-md-8 col-lg-4 col-xl-4 p-0 m-0">
 						<div class="card">
 							<img src="images/img33.jpg" style="height:180px" alt="image1" class="card-img-top">
 							<div class="card-body">
@@ -140,7 +143,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+					<div class="col-xs-12 col-sm-8 col-md-8 col-lg-4 col-xl-4 p-0 m-0">
 						<div class="card">
 							<img src="images/img34.jpg" alt="image1" class="card-img-top">
 							<div class="card-body">
@@ -171,7 +174,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+					<div class="col-xs-12 col-sm-8 col-md-8 col-lg-4 col-xl-4 p-0 m-0">
 						<div class="card">
 							<img src="images/img6.jpg" alt="image1" class="card-img-top" style="height:180px">
 							<div class="card-body">
@@ -222,10 +225,12 @@
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-							<img src="assets/Images/symptoms-icon/NHS-Logo.svg" alt="img-load" width="100" height="50">
+
+							<img src="assets/Images/symptoms-icon/NHS-Logo.svg" class="img-fluid" alt="img-load" >
+
 							<div class="d-flex flex-row">
 								<div class="d-flex flex-column">
-									<h3 class="m-2">UK-NHS</h3>
+
 									<p class="m-2"><strong>National Health Service:</strong>
 										High temperature you can feel hot on your back and chest. A new contious
 										cough, this means couging more than an hour or or 3 or more coughing
@@ -236,11 +241,27 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-							<img src="assets/Images/symptoms-icon/World_Health_Organization_Logo.svg" alt="img-load" width="100" height="50">
+							<img src="assets/Images/symptoms-icon/US_CDC_logo.svg" class="img-fluid"  alt="img-load">
 							<div class="d-flex flex-row">
 								<div class="d-flex flex-column">
-									<h3 class="m-2">WHO</h3>
+
+									<p class="m-2"><strong>Centers for Disease Control and Prevention:</strong>
+										Cough, shortness of breath or difficulty in breathing, fever, chills, repeated
+										shaking with chills, headache, muscle pain, sore throat,
+										new loss of taste or smell.
+									</p>
+									<a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+										target="_blank" class="custom-btn">More Information</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+							<img src="assets/Images/symptoms-icon/World_Health_Organization_Logo.svg" class="img-fluid"  alt="img-load" >
+							<div class="d-flex flex-row">
+								<div class="d-flex flex-column">
+
 									<p class="m-2"><strong>World Health Organisation:</strong>
 										Common symptoms include, fever, tiredness, dry cough. Ohter
 										symptoms include, shortness of breath, aches and pains, sore throath and in
@@ -252,83 +273,66 @@
 							</div>
 						</div>
 
-						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-							<img src="assets/Images/symptoms-icon/US_CDC_logo.svg" alt="img-load" width="60" height="45">
-							<div class="d-flex flex-row">
-								<div class="d-flex flex-column">
-									<h3 class="m-2">US-CDC</h3>
-									<p class="m-2"><strong>Centers for Disease Control and Prevention:</strong>
-										Cough, shortness of breath or difficulty in breathing, fever, chills, repeated
-										shaking with chills, headache, muscle pain, sore throat,
-										new loss of taste or smell.
-									</p>
-									<a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
-										target="_blank" class="custom-btn">More Information</a>
-								</div>
-							</div>
-						</div>
+
 					</div>
 				</div>
 			</div>
 
-
-
-
 			<div class="section-4 bg-dark">
 				<div class="container">
 					<div class="row justify-content-center">
-						<div class="col-md-7 text-center">
-							<img id="instructions-img"  src="images/img30.jpg" alt="Image-7"  width="50%">
+						<div class="col-md-7 my-auto text-center">
+							<img id="instructions-img"  src="images/img9.jpg" class="img-fluid"  alt="Image-7"  >
                     </div>
-						<div class="col-md-5">
-						<h1 class="text-white">Instructions if you have symptoms</h1>
-						<a onclick="changefuncHealthyPeople()">Healthy People /</a>
-                        <a onclick="changefuncOldPeople()">Old People /</a>
-                        <a href="#">Health condition</a>						
-                    	<p id="instructions-para" class="para-1">
-						The single most important action you can take is to stay at Home in order to protect and save lives.
-						</p>
-                                
+							<div class="col-md-5">
+								<h1 class="text-white">Instructions if you have symptoms</h1>
+								<a onclick="changefuncHealthyPeople()">Healthy People /</a>
+								<a onclick="changefuncOldPeople()">Old People /</a>
+								<a href="#">Health condition</a>
+								<p id="instructions-para" class="para-1">
+									The single most important action you can take is to stay at Home in order to protect
+									and save lives.
+								</p>
+
 							</div>
-                            
+
 						</div>
 
 					</div>
 
 
 				</div>
-
-
 	</main>
 
 	<footer>
 		<div class="section-5 text-center">
 			<h4 style="margin-top: 5%;">About-me</h4>
-			<h6 class="my-4">I am student programmer and I am developing <br>this project for student submission project. If you have any idea to 
-            <br>update this project or team up for another project please don,thesitate to contact me</h6>
+			<h6 class="my-4">I am student programmer and I am developing <br>this project for student submission project. If you have any idea to
+				<br>update this project or team up for another project please don,thesitate to contact me</h6>
 
-			<div class="form-inline justify-content-center">
-				<input type="text" name="Email" id="email" placeholder="Email" size="40" class="form-control px-4 py-2">
-				<input type="button" value="Contact-us" class="btn btn-danger px-4 py-2">
+				<div class="form-inline justify-content-center">
+					<input type="text" name="Email" id="email" placeholder="Email" size="40" class="form-control px-4 py-2">
+					<input type="button" value="Contact-us" class="btn btn-danger px-4 py-2">
             </div>
-				<div class="social" style="margin: 5%;">
-					<div class="d-flex flex-row justify-content-center">
-						<i class="fab fa-twitter m-2"></i>
-						<i class="fab fa-facebook m-2"></i>
-						<i class="fab fa-linkedin m-2"></i>
+					<div class="social" style="margin: 5%;">
+						<div class="d-flex flex-row justify-content-center">
+							<i class="fab fa-twitter m-2"></i>
+							<i class="fab fa-facebook m-2"></i>
+							<i class="fab fa-linkedin m-2"></i>
+						</div>
 					</div>
+					<hr>
+					<h5 style="color: lightseagreen;">Covid-19 &copy;</h5>
 				</div>
-				<hr>
-				<h5 style="color: lightseagreen;">Covid-19 &copy;</h5>
-			</div>
 	</footer>
 
+    
 
 	<script src="https://unpkg.com/scrollreveal"></script>
 
 	<script>
 		window.sr = ScrollReveal({ duration: 2000 });
-        sr.reveal('.site-content .d-flex');
+   
         sr.reveal('.section-1 .card');
         sr.reveal('.section-2 .d-flex');
         sr.reveal('.section-3 .col-md-4');
@@ -343,8 +347,8 @@
 	<script src="assets/Javascript_files/worldwide_total_corona_cases.js"></script>
 	<script src="assets/Javascript_files/graph.js"></script>
 	<script src="assets/Javascript_files/API_getData.js"></script>
-    <script src="assets/Javascript_files/instructions.js"></script>
-
+	<script src="assets/Javascript_files/instructions.js"></script>
+	<script src="assets/Javascript_files/stylingjQuerry.js"></script>
 </body>
 
 </html>
