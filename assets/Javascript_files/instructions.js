@@ -35,6 +35,7 @@ of sense of smell are other relevant symptoms.
 If you think you may have symptoms of COVID-19 you should use the NHS 111 online service for information, or NHS 24 if in Scotland.`
     document.getElementById("info-button").innerHTML = "For more information Royal College of Obstetricians & Gynaecologists";
     document.getElementById("info-button").href = "https://www.rcog.org.uk/en/guidelines-research-services/guidelines/coronavirus-pregnancy/covid-19-virus-infection-and-pregnancy/";
+      document.getElementById("instructions-heading").innerHTML = "Instructions for Pregnant women";
 }
 
 function changefuncchilderenandfamilies(){
