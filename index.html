@@ -333,22 +333,15 @@
 						<input type="text" name="name" id="fullname" size="40" class="form-control px-4 py-2" placeholder="Name" required />
 				    </div>
 						<div class="col-xs-2 col-sm-2 col-md-8 col-lg-12 col-xl-12 mb-2 text-center">
-							<input type="text" name="emailaddress" id="emailaddress"  placeholder="Email" size="40" class="form-control px-4 py-2" required />
+							<input type="email" name="emailaddress" id="emailaddress"  placeholder="Email" size="40" class="form-control px-4 py-2" required />
                 	</div>
 							<div class="col-xs-2 col-sm-2 col-md-8 col-lg-12 col-xl-12 mb-4 text-center">
-								<textarea rows="8" cols="42" name="projectsummary" id="projectsummary"  class="form-control px-4 py-2" placeholder="Project description" required></textarea>
+								<textarea id="textarea" rows="8" cols="42" name="projectsummary" id="projectsummary"  class="form-control px-4 py-2" placeholder="Project description" required></textarea>
 							</div>
 							<div class="col-xs-2 col-sm-2 col-md-8 col-lg-12 col-xl-12 mb-2 text-center">
-								<input type="submit" data-toggle="modal" data-target="#myModal" value="Send" class="btn btn-danger px-4 py-2">
+								<input onclick="check()" type="submit" value="Send" class="btn btn-danger px-4 py-2">
                     </div>
-								<div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-									aria-labelledby="myLargeModalLabel" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-										message sent
-										</div>
-									</div>
-								</div>
+								
 				</form>
 			</div>
 
@@ -397,7 +390,6 @@
 	<script src="assets/Javascript_files/graph.js"></script>
 	<script src="assets/Javascript_files/API_getData.js"></script>
 	<script src="assets/Javascript_files/instructions.js"></script>
-	<script src="assets/Javascript_files/stylingjQuerry.js"></script>
 	<script src="assets/Javascript_files/sendEmail.js"></script>
 </body>
 
