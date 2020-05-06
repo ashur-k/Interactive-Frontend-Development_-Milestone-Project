@@ -10,7 +10,7 @@ function changefuncHealthyPeople() {
     document.getElementById("info-button").href = "https://www.nhs.uk/";
 document.getElementById("instructions-heading").innerHTML = "Instructions for Healthy People";
 
-
+   
 }
 
 function changefuncOldPeople() {

@@ -1,9 +1,15 @@
- let myChart = document.getElementById('myChart').getContext('2d');
+ 'use strict'
 
+  let myChart = document.getElementById('myChart').getContext('2d');
+       
+       
+        Chart.defaults.global.defaultFontSize = 18;
+         Chart.defaults.global.defaultFontColor = '#000';
+         
         let casesChart = new Chart (myChart, {
-            type: 'bar',
+            type: 'horizontalBar',
             data:{
-                labels:['Total Cases', 'Total Deaths', 'Total Recovered'],
+                labels:['Cases%', 'Deaths%', 'Recovered%'],
                 datasets:[{
                 label:'countryName',
                
@@ -20,10 +26,11 @@
             options:{
                 title:{
                     display:true,
-                    text:'Largest Cities',
+                    text:'Country Name',
                     fontSize:25
                 },
                 legend:{
+                    display: false,
                     position:'right',
                     labels:{
                         fontColor:'#000'
@@ -31,7 +38,7 @@
                 },
                 layout:{
                     padding:{
-                        left:10,
+                        left:14,
                         right:0,
                         bottom:10,
                         top:10
@@ -50,13 +57,16 @@
         let worldTotalDeaths = data.deaths;
         let worldTotalRecovered = data.recovered;
 
-        let C_totlaCases_P = totalCasesNum / worldTotalCases * 100 ;
-        let C_totlaCases_D = totalDeathsNum / worldTotalDeaths * 100;
-        let C_totlaCases_R = recoveredCasesNum / worldTotalRecovered * 100;
+        let C_totlaCases_P =  (totalCasesNum / worldTotalCases * 100).toFixed(2) ;
+        let C_totlaCases_D = (totalDeathsNum / worldTotalDeaths * 100).toFixed(2);
+        let C_totlaCases_R = (recoveredCasesNum / worldTotalRecovered * 100).toFixed(2);
 
-     casesChart.data.datasets[0].data = [C_totlaCases_P, C_totlaCases_D, C_totlaCases_R];
-     casesChart.data.datasets[0].label = countryName;
-       casesChart.options.title.text = countryName;
+      
+
+
+    casesChart.data.datasets[0].data = [C_totlaCases_P, C_totlaCases_D, C_totlaCases_R];
+    casesChart.data.datasets[0].label = countryName;
+    casesChart.options.title.text = countryName;
 
      casesChart.update();
  });
@@ -65,3 +75,4 @@
  
 
  
+

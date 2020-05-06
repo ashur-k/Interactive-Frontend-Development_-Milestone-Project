@@ -1,4 +1,4 @@
-'use strict'
+
 const baseURL_get_date_country_history = "https://covid-193.p.rapidapi.com/history?day=";
 
 function getCoronoData(countryName, cb)  {
@@ -30,9 +30,12 @@ function printToDocument(countryName){
     getCoronoData(countryName, function(data){
       
     data = data.response;
+  
+      
     //Taking value of country name form API and printing on HTML5 page
-    let countryName = data[0].country;
+      let countryName = data[0].country;
     document.getElementById("countryName").innerHTML = countryName;
+
 
     //Getting key names from api to print them on HTML5 document
     let casesTitleKey = Object.keys(data[0])[1];

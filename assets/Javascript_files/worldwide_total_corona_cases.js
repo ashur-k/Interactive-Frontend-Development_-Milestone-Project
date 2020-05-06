@@ -21,20 +21,30 @@ xhr.send(data);
 
  
 }
+
+ function formatNumber (num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+         }
+
 function updateJumbptron(){
    getGlobalCoronoStats (function(data){
- 
+           
 
     data = data.data;
+
+   let worldConfirmedCases =  formatNumber(data.confirmed);
+   let worldConfirmedDeaths =  formatNumber(data.confirmed);
+   let worldConfirmedRecovered =  formatNumber(data.confirmed);
 
     let date = data.lastReported.toString();
     let truncatedDate = date.substring(0, 10);
    // console.log(truncatedDate);    
 
     document.getElementById("updateDate").innerHTML = truncatedDate;
-    document.getElementById("confirmed").innerHTML = data.confirmed;
-    document.getElementById("world_deaths").innerHTML = data.deaths;
-    document.getElementById("recovered_numbers").innerHTML = data.recovered;
+
+    document.getElementById("confirmed").innerHTML = worldConfirmedCases;
+    document.getElementById("world_deaths").innerHTML = worldConfirmedDeaths;
+    document.getElementById("recovered_numbers").innerHTML = worldConfirmedRecovered;
 
    })
 }
