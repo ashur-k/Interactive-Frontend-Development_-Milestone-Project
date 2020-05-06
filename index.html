@@ -26,8 +26,8 @@
 	<title> Practice Document</title>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
 	<script type="text/javascript">
-	(function(){
-     emailjs.init("user_Zx8oCYZjDKLfUMhTlqddi");
+		(function(){
+      emailjs.init("user_F7No1IIIPOs3Do7C7CB16");
      
    })();
 	</script>
@@ -327,7 +327,8 @@
 			</div>
 			<div class="row justify-content-center">
 
-				<form id="contact-me" class="form-inline justify-content-center" onsubmit="return sendMail(this);" method="POST">
+				<form id="contact-me" class="form-inline justify-content-center" onsubmit="return sendMail(this);"
+					method="POST">
 					<div class="col-xs-2 col-sm-2 col-md-8 col-lg-12 col-xl-12 mb-2 text-center">
 						<input type="text" name="name" id="fullname" size="40" class="form-control px-4 py-2" placeholder="Name" required />
 				    </div>
@@ -338,8 +339,16 @@
 								<textarea rows="8" cols="42" name="projectsummary" id="projectsummary"  class="form-control px-4 py-2" placeholder="Project description" required></textarea>
 							</div>
 							<div class="col-xs-2 col-sm-2 col-md-8 col-lg-12 col-xl-12 mb-2 text-center">
-								<input type="submit" value="Contact-us" class="btn btn-danger px-4 py-2">
+								<input type="submit" data-toggle="modal" data-target="#myModal" value="Send" class="btn btn-danger px-4 py-2">
                     </div>
+								<div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+									aria-labelledby="myLargeModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+										message sent
+										</div>
+									</div>
+								</div>
 				</form>
 			</div>
 
