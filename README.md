@@ -1,4 +1,4 @@
-Covid-19 Pandemic 2019-2020
+# Covid-19 Pandemic 2019-2020
 I have developed this website for people who are interested to see data related to 2019-2020 Covid-19 pandemic.  This website offers the following:
 •	Up to date, coronavirus cases data from all over the World.
 •	Dynamically updated details for selected country cases with its flag.
@@ -6,7 +6,7 @@ I have developed this website for people who are interested to see data related 
 •	Information about corona virus symptoms with useful links
 •	Information and instructions related to COVID-19.
 •	Fully functional form if anyone wants to contact back.
-UX
+# UX
 The website is designed with a modern look, it’s a simple an elegant design easy to navigate and follow. This website is designed and built considering following potential users who might like to use this website.
 •	Someone who wants to view how countries are affected by COVID-19
 •	Someone who wants to see how many percentages of people are affected by Pandemic
@@ -16,7 +16,7 @@ The website is designed with a modern look, it’s a simple an elegant design ea
 •	Pregnant women who are looking for instructions and information “how to keep safe” 
 •	Families with children who are looking for COVID-19 information and instructions.
 The aim of this website is to provide statistical data with concise information and useful link. Before starting this project, I was regularly looking for similar set of information. My family is in Pakistan and I was looking COVID related information in Pakistan. Assuming there are other people like me who might want visit website for similar reasons.
-Features
+# Features
 1.	Website is designed with modern navigation bar with collapsible view on different mobile devices.
 2.	Website is fully responsive on both mobile and tablets with changing its design orientation on screen rotation.
 3.	Website is designed to be efficient with time and easy to navigate.
@@ -26,7 +26,7 @@ Features
 7.	Website is dynamically updating its graph with the selected data.
 8.	Website is implemented with functional contact-back form.
 9.	Website is provided with social links to direct individuals to my social network.
-Features Left to Implement
+## Features Left to Implement
 In future I am planning to update coding behind website with more object-oriented approach.
 I want to update project with effective animations.
 I want to update web with user can get COVID data for selected date
@@ -60,7 +60,7 @@ Technologies Used
 •	Font-awesome
 •	Font awesome free version.
 •	Balsamiq Mock-ups 3 for designing wireframes
-Testing
+# Testing
 The Website was tested in different browsers at each stage of its development, for example Opera, Mozilla Firefox, Apple Safari. Website forms and other content is also tested on machines with slower processor power and internet speed which is comparatively a lot slower than normal broadband speeds. Website is also tested on different mobile devices on both horizontal and vertical screen rotation.
 During testing face I dealt with following problems.
 Email JS was only working when I was sending using my yahoo email address, which I was also used to make my Email JS account. I notices this problem in testing phase and I have resolved it. I think there is some compatibility issue with Email JS and yahoo, Once I started using G-mail forms started working efficiently. 
@@ -69,14 +69,14 @@ Credits
 Content
 All textual content was provided by Ben Driver.
 
-Media
+# Media
 o	https://unsplash.com/ Unsplash for web images
 o	https://commons.wikimedia.org/wiki/File:NHS-Logo.svg, For logo NHS, WHO, and CDC logo images download, 
 o	https://flagpedia.net/download for flags.svg files
 o	https://www.iban.com/country-codes for country codes
 o	https://unpkg.com/scrollreveal	for animation effects
 
-Acknowledgements
+# Acknowledgements
 I want to acknowledged following because I have learnt from them in making of this project.
 •	Mozilla developer Org MDN for coding
 •	W3Schools for coding and their built-in feature for testing
@@ -87,4 +87,5 @@ I want to acknowledged following because I have learnt from them in making of th
 o	Travesy Media
 o	Code & Dogs > Beautiful Charts with JavaScript - Chart.JS Tutorial
 o	Daily Tuition
+ 
 And I want to give special thanks to my Mentor Dick Vlaanderen and tutors at code institute
