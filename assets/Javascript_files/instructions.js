@@ -1,7 +1,9 @@
+//This JS file is BAsically instructions page, and its updating all instructions section
 'use strict'
+//functions to generate html on page
 function changefuncHealthyPeople() {
-    document.getElementById("instructions-para").innerHTML = 
-    `People with mild symptoms who are otherwise healthy should self-isolate and contact
+    document.getElementById("instructions-para").innerHTML =
+        `People with mild symptoms who are otherwise healthy should self-isolate and contact
     their medical provider or a COVID-19 information line for advice on testing and referral. Even if you are healthy and not have symptoms of 
     Covid-19 still you have to mainitain social distancing for their are high chances you becoming a virus carrier.
     . If you think you may have symptoms of COVID-19 you should use the NHS 111 online service for information, or NHS 24 if in Scotland.`
@@ -10,7 +12,7 @@ function changefuncHealthyPeople() {
     document.getElementById("info-button").innerHTML = "For more information visit NHS"
     document.getElementById("info-button").href = "https://www.nhs.uk/";
     document.getElementById("instructions-heading").innerHTML = "Instructions for Healthy People";
-document.getElementById("healthyPeople").style.color = "#FFF";
+
 
 }
 
@@ -24,7 +26,7 @@ function changefuncOldPeople() {
     document.getElementById("info-button").innerHTML = "For more information visit NHS"
     document.getElementById("info-button").href = "https://www.nhs.uk/";
     document.getElementById("instructions-heading").innerHTML = "Instructions for Old People";
-document.getElementById("oldPeople").style.color = "#FFF";
+
 }
 
 function changefuncPeopleHealthcondi() {
@@ -38,7 +40,7 @@ If you think you may have symptoms of COVID-19 you should use the NHS 111 online
     document.getElementById("info-button").innerHTML = "For more information Royal College of Obstetricians & Gynaecologists";
     document.getElementById("info-button").href = "https://www.rcog.org.uk/en/guidelines-research-services/guidelines/coronavirus-pregnancy/covid-19-virus-infection-and-pregnancy/";
     document.getElementById("instructions-heading").innerHTML = "Instructions for Pregnant women";
-document.getElementById("preganantWomen").style.color = "#FFF";
+
 
 }
 
@@ -55,6 +57,6 @@ all cases for at least seven days. Everyone else in the household must stay at h
 14 days after the first person symptoms appear, even if they themselves have no symptoms.`;
     document.getElementById("info-button").innerHTML = "For more information visit NHS"
     document.getElementById("info-button").href = "https://www.nhs.uk/";
-document.getElementById("families").style.color = "#FFF";
+
 }
 

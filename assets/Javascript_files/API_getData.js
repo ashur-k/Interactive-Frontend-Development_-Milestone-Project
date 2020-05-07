@@ -103,7 +103,7 @@ function printToDocument(countryName) {
         let totalTests = data[0].tests.total;
         document.getElementById("testsValue0").innerHTML = totalTests;
 
-
+        //invoking updatechart function to retreive total cases, deaths and recovered values for calculating percentage and priting on chart
         updateChart(totalCasesNum, totalDeathsNum, recoveredCasesNum, countryName);
 
 
@@ -111,9 +111,11 @@ function printToDocument(countryName) {
 
 
 }
-// I am executing here print document to display UK value by default
+// invoking print document function to setup defualt UK calue on page load
 printToDocument("UK");
 
+//get date function to reterieve everytime data for current data.
+//Also in future I want to implement new feature in web where user can give date and get cases for that particular API can support that feature
 
 function getDate() {
     let today = new Date();
@@ -127,4 +129,4 @@ function getDate() {
 }
 
 
-/*document.getElementById("today_date").innerHTML = getDate(); */
+

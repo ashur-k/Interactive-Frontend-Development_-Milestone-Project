@@ -1,3 +1,5 @@
+// this file is created to get country names from API and populate selectbox with country name array
+
 'use strict'
 /* Getting countries names form Covid API to verify if country name is correct*/
 function getCountriesName(cb) {
@@ -22,7 +24,7 @@ function getCountriesName(cb) {
 /* Populating drop down list with country names data, all countries name are in array format */
 function popualteDropDown() {
 
-    getCountriesName(function(data) {
+    getCountriesName(function (data) {
 
         let CountriesArray = data.response;
 
@@ -34,7 +36,7 @@ function popualteDropDown() {
                 txt = document.createTextNode(arr[i]);
             option.appendChild(txt);
             select.insertBefore(option, select.lastChild);
-            
+
         }
 
     });
@@ -48,12 +50,11 @@ function CheckValidCountry() {
         document.getElementById("err_msg").style.display = "inline-block";
         document.getElementById("select").style.border = "1px solid red";
     } else {
-          document.getElementById("select").style.border = "1px solid black";
+        document.getElementById("select").style.border = "1px solid black";
         document.getElementById("err_msg").style.display = "none";
-       /* document.getElementById("data").innerHTML = "";*/
-       /* writeToDocument(country_name)*/
+        /* document.getElementById("data").innerHTML = "";*/
+        /* writeToDocument(country_name)*/
         printToDocument(country_name);
-
     }
 
 }
