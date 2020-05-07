@@ -1,16 +1,17 @@
 'use strict'
 function changefuncHealthyPeople() {
-    document.getElementById("instructions-para").innerHTML = `People with mild symptoms who are otherwise healthy should self-isolate and contact
-                        their medical provider or a COVID-19 information line for advice on testing and referral. Even if you are healthy and not have symptoms of 
-                        Covid-19 still you have to mainitain social distancing for their are high chances you becoming a virus carrier.
-                        . If you think you may have symptoms of COVID-19 you should use the NHS 111 online service for information, or NHS 24 if in Scotland.`
+    document.getElementById("instructions-para").innerHTML = 
+    `People with mild symptoms who are otherwise healthy should self-isolate and contact
+    their medical provider or a COVID-19 information line for advice on testing and referral. Even if you are healthy and not have symptoms of 
+    Covid-19 still you have to mainitain social distancing for their are high chances you becoming a virus carrier.
+    . If you think you may have symptoms of COVID-19 you should use the NHS 111 online service for information, or NHS 24 if in Scotland.`
 
     document.getElementById("instructions-img").src = "assets/Images/img23.jpg";
     document.getElementById("info-button").innerHTML = "For more information visit NHS"
     document.getElementById("info-button").href = "https://www.nhs.uk/";
-document.getElementById("instructions-heading").innerHTML = "Instructions for Healthy People";
+    document.getElementById("instructions-heading").innerHTML = "Instructions for Healthy People";
+document.getElementById("healthyPeople").style.color = "#FFF";
 
-   
 }
 
 function changefuncOldPeople() {
@@ -23,6 +24,7 @@ function changefuncOldPeople() {
     document.getElementById("info-button").innerHTML = "For more information visit NHS"
     document.getElementById("info-button").href = "https://www.nhs.uk/";
     document.getElementById("instructions-heading").innerHTML = "Instructions for Old People";
+document.getElementById("oldPeople").style.color = "#FFF";
 }
 
 function changefuncPeopleHealthcondi() {
@@ -35,12 +37,14 @@ of sense of smell are other relevant symptoms.
 If you think you may have symptoms of COVID-19 you should use the NHS 111 online service for information, or NHS 24 if in Scotland.`
     document.getElementById("info-button").innerHTML = "For more information Royal College of Obstetricians & Gynaecologists";
     document.getElementById("info-button").href = "https://www.rcog.org.uk/en/guidelines-research-services/guidelines/coronavirus-pregnancy/covid-19-virus-infection-and-pregnancy/";
-      document.getElementById("instructions-heading").innerHTML = "Instructions for Pregnant women";
+    document.getElementById("instructions-heading").innerHTML = "Instructions for Pregnant women";
+document.getElementById("preganantWomen").style.color = "#FFF";
+
 }
 
-function changefuncchilderenandfamilies(){
+function changefuncchilderenandfamilies() {
 
-      document.getElementById("instructions-heading").innerHTML = "Instructions for Childeren and families";
+    document.getElementById("instructions-heading").innerHTML = "Instructions for Childeren and families";
     document.getElementById("instructions-img").src = "assets/Images/img15.jpg";
     document.getElementById("instructions-para").innerHTML = `UK Government allows, parents do not live in the same household, childeren under 18 
     can moved betwen their parents homes. Their is advice aviliable at COVID-19 guidance for children and families <a href="https://www.cafcass.gov.uk/" target="_blank">(cafcass)</a> to encourage effective co-parenting 
@@ -49,7 +53,8 @@ function changefuncchilderenandfamilies(){
     best interests of the child and the health of those around them.  If someone in family have symptoms must stay at home isolated from others in family until the symptoms ended and in
 all cases for at least seven days. Everyone else in the household must stay at home for at least
 14 days after the first person symptoms appear, even if they themselves have no symptoms.`;
-    document.getElementById("info-button").innerHTML = "For more information visit NHS"  
-document.getElementById("info-button").href = "https://www.nhs.uk/";
+    document.getElementById("info-button").innerHTML = "For more information visit NHS"
+    document.getElementById("info-button").href = "https://www.nhs.uk/";
+document.getElementById("families").style.color = "#FFF";
 }
 
