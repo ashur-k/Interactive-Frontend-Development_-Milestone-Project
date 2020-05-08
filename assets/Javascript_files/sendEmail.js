@@ -7,10 +7,10 @@ function sendMail(contactForm) {
     })
         .then(
             function (response) {
-                alert("E-MAIL IS SUCCESSFULLY SENT", response);
+                alert("E-MAIL SUCCESSFULLY SENT", response);
             },
             function (error) {
-                alert("E-MAIL SENDING FAILED", error);
+                alert("ERROR RECEIVED SENDING E-MAIL", error);
             }
         );
     return false;  // To block from loading a new page
