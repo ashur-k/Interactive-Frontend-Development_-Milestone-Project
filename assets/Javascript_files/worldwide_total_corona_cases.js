@@ -39,8 +39,8 @@ function updateJumbptron() {
         data = data.data;
 
         let worldConfirmedCases = formatNumber(data.confirmed);
-        let worldConfirmedDeaths = formatNumber(data.confirmed);
-        let worldConfirmedRecovered = formatNumber(data.confirmed);
+        let worldConfirmedDeaths = formatNumber(data.deaths);
+        let worldConfirmedRecovered = formatNumber(data.recovered);
 
         // changing date into printable format on web page in nav bar section
         let date = data.lastReported.toString();

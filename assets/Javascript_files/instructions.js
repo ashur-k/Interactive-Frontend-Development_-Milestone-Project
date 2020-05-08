@@ -31,11 +31,11 @@ function changefuncOldPeople() {
 
 function changefuncPeopleHealthcondi() {
     document.getElementById("instructions-img").src = "assets/Images/pregnant.jpg";
-    document.getElementById("instructions-para").innerHTML = ` Generally, pregnant women do not appear to be more likely 
+    document.getElementById("instructions-para").innerHTML = ` Generally pregnant women are not likely 
 to be seriously unwell than other healthy adults if they develop coronavirus. 
 It is expected the large majority of pregnant women will experience only mild or 
 moderate cold/flu like symptoms. Cough, fever, shortness of breath, headache and loss 
-of sense of smell are other relevant symptoms.
+of sense of smell, are other relevant symptoms.
 If you think you may have symptoms of COVID-19 you should use the NHS 111 online service for information, or NHS 24 if in Scotland.`
     document.getElementById("info-button").innerHTML = "For more information Royal College of Obstetricians & Gynaecologists";
     document.getElementById("info-button").href = "https://www.rcog.org.uk/en/guidelines-research-services/guidelines/coronavirus-pregnancy/covid-19-virus-infection-and-pregnancy/";
